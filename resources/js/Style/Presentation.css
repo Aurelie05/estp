@@ -1,0 +1,421 @@
+/* Conteneur principal */
+.presentation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  /* Conteneur de l'image floutée */
+  .blurred-image-container {
+    
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+  }
+  
+  /* Image de fond */
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: blur(1px);  */
+    transform: scale(1.1); 
+    transition: filter 0.3s ease, transform 0.3s ease; /* Ajout de la transition */
+  }
+  
+  /* Superposition de couleur */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 111, 137, 0.5); 
+  }
+ /* Conteneur principal */
+.presentation-section {
+    position: absolute;
+    bottom: -170px;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 6px solid; */
+    /* background: #f5f5f5;  */
+  }
+  
+  /* Animation globale */
+  .director-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    background: #fff; 
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Ombre douce */
+    padding: 30px;
+    opacity: 0; /* Initialement invisible */
+    transform: translateY(100px); /* Hors de l'écran */
+    animation: slideUp 0.8s ease-out forwards; /* Animation */
+  }
+  
+  /* Animation keyframes */
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+  
+  /* Image et nom */
+  .director-image {
+    display: flex;
+    width: 30%;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  
+  .director-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Image circulaire */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .director-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Contenu du texte */
+  .director-content {
+    flex: 1;
+    /* border: 4px solid red; */
+  }
+  
+  .director-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .director-text {
+    /* border: 4px solid; */
+    height: 150px; /* Garde une hauteur fixe */
+    font-size: 16px;
+    color: #555;
+    width: 100%; /* Largeur limitée */
+    line-height: 1.6;
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-align: justify; /* Justifie le texte */
+    white-space: normal; /* Permet le retour automatique à la ligne */
+    word-wrap: break-word; /* S'assure que les mots longs ne débordent pas */
+    overflow-wrap: break-word; /* Alternative moderne à word-wrap */
+}
+  
+  /* .text2{
+    position: absolute;
+    top: 500px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    
+  } */
+  .line2 {
+    display: inline-block;
+    width: 5px;
+    height: 27px;
+    background-color: #000;
+    margin-right: 10px;
+  }
+
+  .slider-container {
+    width: 50%; /* Utilise toute la largeur de la page */
+    height: 500px; /* Hauteur fixe pour le slider */
+    top: 500px;
+    position: relative; /* Position relative pour un placement correct des éléments enfants */
+    margin: 0 auto; /* Centre horizontalement */
+    padding: 20px;
+    background: rgb(100, 15, 15); /* Fond pour le conteneur */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* object-fit: cover; */
+  }
+  
+  .slider-title {
+    text-align: left;
+    font-size: 18px;
+    padding: 100px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-bottom: 2px solid #464da9; /* Ligne verte sous le titre */
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .slider-item {
+    width: 100%; /* L'item prend toute la largeur disponible */
+    height: 100%; /* L'item prend toute la hauteur du conteneur */
+    display: flex; 
+    /* border: 9px solid; */
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* object-fit: contain; */
+  }
+  
+  .slider-image {
+    position: absolute;
+    /* padding: 20px; */
+    width: 100%; /* L'image remplit toute la largeur du conteneur */
+    height: 500px; /* L'image remplit toute la hauteur du conteneur */
+    object-fit: contain; 
+    /* border: 2px solid; */
+    border-radius: 10px;
+  }
+  
+  .slick-dots {
+    bottom: -30px;
+  }
+  
+  .slick-dots li button:before {
+    color: #5ca946; /* Couleur des points de navigation */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #2e7d32; /* Couleur des points actifs */
+  }
+  
+
+
+  .footer-container {
+    position: absolute;
+    top: 1000px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; /* Sépare le contenu principal du bas */
+    align-items: center;
+    width: 100%;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px 0;
+    height: 400px;
+    /* position: relative; */
+  }
+  
+  /* Contenu principal aligné horizontalement */
+  .footer-content {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around; /* Espacement uniforme entre les sections */
+    align-items: flex-start; 
+    width: 100%;
+    max-width: 1200px;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* Chaque section du footer */
+  .footer-section {
+    text-align: center;
+    /* border: 1px solid; */
+    /* margin: 20px; */
+    width: 30%; /* Assure une largeur égale pour chaque section */
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  /* Section centrale avec le logo */
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Formulaire de la newsletter */
+  .newsletter-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .newsletter-input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .newsletter-button {
+    padding: 8px 12px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .newsletter-button:hover {
+    background-color: #580b9e;
+  }
+  
+  /* Footer bottom (centré en bas) */
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%; /* S'étend sur toute la largeur */
+  }
+  
+
+  
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .presentation-container{
+    width: 100%;
+    /* border: 4px solid; */
+  }
+  .blurred-image-container{
+    width: 100%;
+    height: 300px;
+    /* border: 5px solid red; */
+  }
+  .presentation-section{
+    width: 90%;
+    position: absolute;
+    /* top: 10px; */
+  }
+  .director-image{
+    width: 40%;
+  }
+  .director-content{
+    width: 60%;
+    
+  }
+  .director-title{
+    font-size: 15px;
+  }
+  .director-text{
+    width: 100%;
+    /* border: 2px solid; */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-align: justify; /* Justifie le texte */
+    white-space: normal; /* Permet le retour automatique à la ligne */
+    word-wrap: break-word; /* S'assure que les mots longs ne débordent pas */
+    overflow-wrap: break-word; 
+    font-size: 10px;
+  }
+
+
+
+  .footer-container{
+    width: 100%;
+    height: 600px;
+    /* position: absolute; */
+    flex-direction: column;
+    /* top: 3300px; */
+  }
+  .footer-center{
+    display: none;
+  }
+  .footer-section{
+    margin-bottom: 40px;
+  }
+
+  h3{
+    font-size: 15px;
+
+    color: #6a0dad;
+  }
+ 
+  .footer-center{
+    display: none;
+  }
+  .footer-section{
+    margin-bottom: 40px;
+  }
+
+  h3{
+    font-size: 15px;
+
+    color: #6a0dad;
+  }
+  .footer-bottom{
+    /* margin-top: 50px; */
+    height: 30px;
+    /* border: 1px solid violet; */
+  }
+ }
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .presentation-container{
+    width: 100%;
+    /* border: 4px solid; */
+  }
+  .blurred-image-container{
+    width: 100%;
+    height: 300px;
+    /* border: 5px solid red; */
+  }
+  .presentation-section{
+    width: 80%;
+    /* top: -0px; */
+    /* position: absolute; */
+  }
+  .director-image{
+    width: 30%;
+  }
+  .director-content{
+    width: 70%;
+    
+  }
+  .director-title{
+    font-size: 20px;
+  }
+  .director-text{
+    width: 100%;
+    /* border: 2px solid; */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-align: justify; /* Justifie le texte */
+    white-space: normal; /* Permet le retour automatique à la ligne */
+    word-wrap: break-word; /* S'assure que les mots longs ne débordent pas */
+    overflow-wrap: break-word; 
+    font-size: 18px;
+  }
+
+
+ }

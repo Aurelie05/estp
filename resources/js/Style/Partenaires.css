@@ -1,0 +1,290 @@
+.presentation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Conteneur de l'image floutée */
+.blurred-image-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* Image de fond */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* filter: blur(1px);  */
+  transform: scale(1.1); 
+  transition: filter 0.3s ease, transform 0.3s ease; /* Ajout de la transition */
+}
+
+/* Superposition de couleur */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(45, 111, 137, 0.5); 
+}
+
+/* Remove the import and start directly with CSS */
+.partenaire-container {
+    padding: 40px 20px;
+    /* background-color: #f9f9f9; */
+    color: #333;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+  }
+  
+  /* Titre principal */
+  .partenaire-title {
+    font-size: 2.5rem;
+    color: #6a0dad; /* Couleur principale */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  /* Section partenaires */
+  .partenaire-section {
+    margin-bottom: 50px;
+  }
+  
+  /* Titre de section */
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #444;
+    text-transform: uppercase;
+  }
+  
+  /* Style pour chaque élément du slider */
+  .slider-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Conteneur individuel pour chaque logo */
+  .logo-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .logo-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo */
+  .partenaire-logo {
+    width: 100px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-content: center;
+    margin: 0 auto; /* Centrer le logo horizontalement */
+    margin-bottom: 10px;
+  }
+  
+  /* Nom du partenaire */
+  .partenaire-name {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
+
+
+  .localisation-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map-container {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-details {
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .contact-details h2 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .contact-details p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+  
+  body{
+    background-color: #e7e5e9;
+  }
+  
+  .footer-container {
+    position: absolute;
+    top: 1500px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; /* Sépare le contenu principal du bas */
+    align-items: center;
+    width: 100%;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px 0;
+    height: 400px;
+    /* position: relative; */
+  }
+  
+  /* Contenu principal aligné horizontalement */
+  .footer-content {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around; /* Espacement uniforme entre les sections */
+    align-items: flex-start; 
+    width: 100%;
+    max-width: 1200px;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* Chaque section du footer */
+  .footer-section {
+    text-align: center;
+    /* border: 1px solid; */
+    /* margin: 20px; */
+    width: 30%; /* Assure une largeur égale pour chaque section */
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  /* Section centrale avec le logo */
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Formulaire de la newsletter */
+  .newsletter-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .newsletter-input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .newsletter-button {
+    padding: 8px 12px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .newsletter-button:hover {
+    background-color: #580b9e;
+  }
+  
+  /* Footer bottom (centré en bas) */
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%; /* S'étend sur toute la largeur */
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .blurred-image-container{
+      width: 100%;
+      height: 300px;
+    }
+    .partenaire-title{
+      font-size: 20px;
+    }
+    .section-title{
+      font-size: 18px;
+    }
+    .footer-container{
+      width: 100%;
+      height: 600px;
+      position: absolute;
+      flex-direction: column;
+      top: 1200px;
+    }
+    .footer-center{
+      display: none;
+    }
+    .footer-section{
+      margin-bottom: 40px;
+    }
+
+    h3{
+      font-size: 15px;
+ 
+      color: #6a0dad;
+    }
+    .footer-bottom{
+      /* margin-top: 50px; */
+      height: 30px;
+      /* border: 1px solid violet; */
+    }
+     
+    
+  }

@@ -5,7 +5,7 @@ import Guest from '@/Layouts/GuestLayout';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import '@/Style/Welcome.css'
+import '@/Style/Welcome.css'
 import slide1 from '@/Assets/fille.jpg'
 import { MdOutlinePlace } from "react-icons/md";
 import { FaArrowDown } from "react-icons/fa";

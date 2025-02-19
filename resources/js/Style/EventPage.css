@@ -1,0 +1,96 @@
+/* Conteneur principal */
+.container {
+    padding: 24px;
+}
+
+/* En-tête avec le bouton */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+/* Titre */
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Bouton d'ajout */
+.btn-add {
+    background-color: #3b82f6;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #2563eb;
+}
+
+/* Liste des événements */
+.event-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Carte d'événement */
+.event-card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+/* Titre de l'événement */
+.event-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Image */
+.event-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Description */
+.event-description {
+    margin: 8px 0;
+}
+
+/* Actions */
+.event-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 12px;
+}
+
+/* Bouton de suppression */
+.btn-delete {
+    background-color: #ef4444;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #dc2626;
+}
+
+/* Aucun événement */
+.no-events {
+    text-align: center;
+    font-size: 1rem;
+    color: #6b7280;
+}

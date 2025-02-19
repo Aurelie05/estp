@@ -6,12 +6,11 @@ import { LuMenu } from "react-icons/lu";
 import { useEffect, useState } from "react";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { CiMenuKebab } from "react-icons/ci";
-// import logo from '@/Assets/ESTP.f30db3437790b8dbc7d7.png'
-// import '@/Style/Guest.css'
+import logo from '@/Assets/ESTP.f30db3437790b8dbc7d7.png'
+import '@/Style/Guest.css'
 
 export default function Guest({ children }: PropsWithChildren) {
-   
-
+    
 
     const [isVisible, setIsVisible] = useState(true); // Contrôle de la visibilité de la navbar
     const [lastScrollY, setLastScrollY] = useState(0); // Dernière position de scroll
@@ -47,7 +46,7 @@ export default function Guest({ children }: PropsWithChildren) {
             
                 <div className="logosection ">
                     <img 
-                        // src={logo} 
+                        src={logo} 
                         alt="Logo"  
                         
                     />
@@ -79,7 +78,7 @@ export default function Guest({ children }: PropsWithChildren) {
             
             <div className="logosection2 ">
                 <img 
-                    // src={logo} 
+                    src={logo} 
                     alt="Logo"  
                     
                 />
@@ -90,11 +89,9 @@ export default function Guest({ children }: PropsWithChildren) {
                 </div>
         </div>
 
-                            <div>
-                                ddof
-                            </div>
 
-            {/* {menuOpen && (
+
+            {menuOpen && (
                 <>  
                 <nav className='menu3'>
                     <ul>
@@ -109,7 +106,7 @@ export default function Guest({ children }: PropsWithChildren) {
                 </nav>
                 </>
 
-            )} */}
+            )}
 
             <div className='guestchildren'>
                 {children}
