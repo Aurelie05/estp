@@ -90,9 +90,11 @@ export default function Guest({ children }: PropsWithChildren) {
                 </div>
         </div>
 
+                            <div>
+                                dkdozdzdok
+                            </div>
 
-
-            {menuOpen && (
+            {/* {menuOpen && (
                 <>  
                 <nav className='menu3'>
                     <ul>
@@ -107,7 +109,7 @@ export default function Guest({ children }: PropsWithChildren) {
                 </nav>
                 </>
 
-            )}
+            )} */}
 
             <div className='guestchildren'>
                 {children}
