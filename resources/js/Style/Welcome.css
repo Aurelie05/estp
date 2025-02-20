@@ -794,7 +794,7 @@
     }
     .events-container{
         position: absolute;
-        top: 700px; 
+        top: 770px; 
         /* border: 1px solid; */
     }
     .events-title{
@@ -804,7 +804,7 @@
     }
     .box4{
          position: absolute;
-        top: 1550px; 
+        top: 1750px; 
         /* border: 1px solid; */
     }
     .box4 h2 {
@@ -819,14 +819,14 @@
     }
     .box5{
         position: absolute;
-        top: 1800px; 
+        top: 1900px; 
     }
     .boximage2{
         width: 40%;
     }
     .box6{
         position: absolute;
-        top: 2200px; 
+        top: 2300px; 
         /* border: 1px solid;  */
     }
     .box6 h2{
@@ -844,7 +844,7 @@
     }
     .box7{
         position: absolute;
-        top: 2450px; 
+        top: 2550px; 
         /* border: 1px solid;  */
     }
      
