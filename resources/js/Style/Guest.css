@@ -78,7 +78,7 @@
 
 .menusection{
     width: 70%;
-    height: 50px;
+    height: 40px;
     align-items: center;
     align-content: center;
     justify-content: center;
@@ -196,7 +196,7 @@
     }
     .logosection2 img{
         
-            width: 50%;
+            width: 30%;
             height: 80px;
             padding: 15px;
             object-fit: contain;
