@@ -5,7 +5,7 @@
     flex-direction: row; 
     justify-content: space-between; /* Sépare le contenu principal du bas */
     align-items: center;
-    width: 100%;
+    width: 100vw;
     background-color: #1c1c1c;
     color: #fff;
     padding: 20px 0;
@@ -102,11 +102,11 @@
   
   @media (min-width: 320px) and (max-width: 767px) {
     .footer-container{
-      width: 100%;
+      width: 100vw;
       height: 600px;
       position: absolute;
       flex-direction: column;
-      top: 3300px;
+      top: 3600px;
     }
     .footer-center{
       display: none;

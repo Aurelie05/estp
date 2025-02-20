@@ -646,11 +646,11 @@
 
     }
     .box4{
-        width: 90%;
+        width: 80%;
         height: 300px;
         margin: 0 auto;
         position: absolute;
-        top: 1800px;
+        top: 2000px;
     }
     .box4 h2{
         font-size: 19px;
@@ -676,11 +676,11 @@
     }
 
     .box5{
-        width: 90%;
+        width: 80%;
         height: 300px;
         margin: 0 auto;
         position: absolute;
-        top: 2150px;
+        top: 2350px;
     }
    
     .box5 span{
@@ -696,11 +696,11 @@
         /* border: 1px solid; */
     }
     .box6{
-        width: 90%;
+        width: 80%;
         height: 300px;
         margin: 0 auto;
         position: absolute;
-        top: 2600px;
+        top: 2800px;
         z-index: 1;
     }
     .box6 h2{
@@ -728,11 +728,11 @@
     }
     
     .box7{
-        width: 90%;
+        width: 80%;
         height: 300px;
         margin: 0 auto;
         position: absolute;
-        top: 2950px;
+        top: 3150px;
         z-index: 1;
     }
     
