@@ -47,8 +47,7 @@ export default function Guest({ children }: PropsWithChildren) {
                 <div className="logosection ">
                     <img 
                         src={logo} 
-                        alt="Logo"  
-                        
+                        alt="Logo"   
                     />
                 </div>
 
@@ -76,18 +75,18 @@ export default function Guest({ children }: PropsWithChildren) {
 
             <div className={`navbar2  ${isVisible ? "visible" : "hidden"}`}>
             
-            <div className="logosection2 ">
-                <img 
-                    src={logo} 
-                    alt="Logo"  
-                    
-                />
-            </div>
-
-            <div className='menu2 ' onClick={toggleMenu}>
-                    {menuOpen ? <IoMdCloseCircleOutline /> : <LuMenu />}
+                <div className="logosection2 ">
+                    <img 
+                        src={logo} 
+                        alt="Logo"  
+                        
+                    />
                 </div>
-        </div>
+
+                <div className='menu2 ' onClick={toggleMenu}>
+                        {menuOpen ? <IoMdCloseCircleOutline /> : <LuMenu />}
+                </div>
+            </div>
 
 
 
