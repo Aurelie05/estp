@@ -53,9 +53,9 @@
     padding-top: 80px; /* Compense la hauteur de la navbar */
 }
 
-.logosection{
+.logosection9{
     width: 20%;
-    height: 80px;
+    height: 90px;
     /* padding: px; */
     /* align-items: center; */
     /* align-content: center; */
@@ -65,17 +65,30 @@
     /* margin-right: 130px; */
     /* object-fit: contain; */
 }
-.logosection img{
+.logosection9 img{
     width: 30%;
     height: 80px;
-    padding: 5px;
+    /* padding: 5px; */
     object-fit: contain;
 
-    /* border: 1px solid red; */
+    border: 1px solid red;
     /* color: brown; */
     
 }
 
+.logosection {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 70px;
+    
+}
+
+.logosection img {
+    padding: 5px;
+    height: 60px; /* Ajuste la hauteur du logo */
+    object-fit: contain;
+}
 .menusection{
     width: 70%;
     height: 40px;
@@ -172,6 +185,11 @@
     top: 0;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Espacement entre le logo et le menu */
+    align-items: center;
+    height: 70px;
+    padding: 0 20px; 
     transition: transform 0.3s ease-in-out;
 }
 
@@ -185,35 +203,28 @@
     transform: translateY(-100%); /* Cachée en haut de l'écran */
 }
 
-    .logosection2{
-        width: 50%;
-        height: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* border: 1px solid; */
+.logosection2 {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 70px;
+}
 
-    }
-    .logosection2 img{
-        
-            width: 30%;
-            height: 80px;
-            padding: 15px;
-            object-fit: contain;
-    }
-    .menu2 {
-        width: 50%; 
-        max-width: 50%; /* Évite qu'il prenne trop d'espace */
-        height: 80px;
-        display: flex;
-        /* align-items: center; */
-        justify-content: center;
-        align-content: center;
-        display: block !important;
-        font-size: 35px;
-        /* border: 2px solid pink; */
-        /* margin-right: 60px; */
-    }
+.logosection2 img {
+    height: 50px; /* Ajuste la hauteur du logo */
+    object-fit: contain;
+}
+
+.menu2 {
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+    width: 30%;
+    /* border: 1px solid; */
+    font-size: 30px;
+}
+
+    
     .menu3{
         display: block;
         position: absolute;
