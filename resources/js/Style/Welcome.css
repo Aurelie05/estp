@@ -580,7 +580,7 @@
     .text-box{
         width: 70%;
         /* margin: 0 auto; */
-        height: 400px;
+        height: 300px;
         position: absolute;
         bottom: -60px; 
         left: 50%;
@@ -625,7 +625,7 @@
     .events-container{
         width: 100%;
         position: absolute;
-        top: 780px;
+        top: 800px;
         /* border: 1px solid; */
 
     }
@@ -768,6 +768,14 @@
     }
     .text-box{
         position: absolute;
+        top: 10px;
+        width: 70%;
+        /* margin: 0 auto; */
+        height: 300px;
+        position: absolute;
+        bottom: -60px; 
+        left: 50%;
+        color: #000;
         /* bottom: 5px; */
         /* border: 2px solid red; */
 
