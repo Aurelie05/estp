@@ -768,7 +768,7 @@
     }
     .text-box{
         position: absolute;
-        top: 10px;
+        /* top: -80px; */
         width: 70%;
         /* margin: 0 auto; */
         height: 300px;
