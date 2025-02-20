@@ -61,17 +61,17 @@
     /* align-content: center; */
     /* justify-content: center; */
     display: flex;
-    /* border: 1px solid; */
+    border: 1px solid;
     /* margin-right: 130px; */
     /* object-fit: contain; */
 }
 .logosection img{
-    width: 30%;
+    width: 10%;
     height: 50px;
     padding: 5px;
     object-fit: contain;
 
-    /* border: 1px solid; */
+    border: 1px solid red;
     /* color: brown; */
     
 }
