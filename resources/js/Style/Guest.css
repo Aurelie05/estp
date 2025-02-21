@@ -171,7 +171,9 @@
 
     
 
-      
+    body {
+        padding-top: 80px; /* Hauteur de la navbar pour éviter qu'elle cache le contenu */
+    }   
     /* Navbar fixe */
 .navbar2 {
     position: fixed;
@@ -179,8 +181,11 @@
     width: 100%;
     z-index: 1000;
     display: flex;
+    margin: 0; /* Évite les marges inattendues */
+    transform: translateY(0);
+    left: 0;
     /* display: block; */
-    border: 2px solid red;
+    /* border: 2px solid red; */
     justify-content: space-between; 
     align-items: center;
     height: 80px;

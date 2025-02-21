@@ -82,7 +82,7 @@ export default function Welcome({
 
     return (
         <Guest>
-            <Head title="Welcome" />
+            <Head title="INP-HB" />
             <div className='welcomecontainer'>
                 <div className="imageslider ">
                     <Slider {...settings}>
