@@ -42,36 +42,14 @@ export default function Guest({ children }: PropsWithChildren) {
 
     return (
         <div className='container'>
-             <div className={`navbar3  ${isVisible ? "visible" : "hidden"}`}>
-            
-                <div className="logosection ">
-                    <img 
-                        src={logo} 
-                        alt="Logo"   
-                    />
-                </div>
+            <div className='nav'>
+                <div>logo</div>
+                <div>lorem</div>
+                <div>doer</div>
+                <div>recherche</div>
 
-                <div className='menusection'>
-                    
-                    <div className='menu ' onClick={ () => window.open('/','_self')}>Accueil</div>
-                    <div className='menu ' onClick={ () => window.open('/presentation','_self')}>
-                        Présentation
-                        {/* <div className="dropdown-content">
-                            <div className="submenu" >Mot du Directeur</div>
-                            <div className="submenu" >Campus</div>
-                        </div> */}
-                    </div>
-                    <div className='menu ' onClick={ () => window.open('/ecole','_self')}>Filieres</div>
-                    <div className='menu  ' onClick={ () => window.open('/partenaire','_self')}>Partenaires</div>
-                    <div className='menu ' onClick={ () => window.open('/actualités','_self')}>Actualités</div>
-                    <div className='menu ' >Offres de stage</div>
-                    
-
-                </div>
-                <div className='menu2 ' onClick={toggleMenu}>
-                        {menuOpen ? <ImMenu3 /> : <ImMenu3 />}
-                </div>
             </div>
+             
 
             <div className={`navbar2  ${isVisible ? "visible" : "hidden"}`}>
             
