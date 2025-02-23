@@ -51,7 +51,7 @@
 
 /* Contenu principal (pour éviter que la navbar ne couvre le contenu) */
 .guestchildren {
-    padding-top: 80px; 
+    /* padding-top: 80px;  */
 }
 
 .logosection9{
