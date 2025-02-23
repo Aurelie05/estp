@@ -577,8 +577,8 @@
     }
     .welcomecontainer{
         width: 100%;
-        overflow:hidden;
-        /* border: 2px solid red; */
+        overflow-x: hidden; 
+        border: 2px solid red;
     }
     .imageslider{
         max-width: 100%;
