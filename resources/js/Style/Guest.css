@@ -50,9 +50,9 @@
 }
 
 /* Contenu principal (pour éviter que la navbar ne couvre le contenu) */
-.guestchildren {
-    padding-top: 80px; /* Compense la hauteur de la navbar */
-}
+/* .guestchildren {
+    padding-top: 80px; 
+} */
 
 .logosection9{
     width: 20%;
