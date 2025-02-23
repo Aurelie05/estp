@@ -42,7 +42,7 @@ export default function Guest({ children }: PropsWithChildren) {
 
     return (
         <div className='container'>
-             <div className={`navbar  ${isVisible ? "visible" : "hidden"}`}>
+             <div className={`navbar3  ${isVisible ? "visible" : "hidden"}`}>
             
                 <div className="logosection ">
                     <img 
