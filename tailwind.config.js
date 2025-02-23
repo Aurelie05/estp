@@ -15,6 +15,12 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            height: {
+                'screen': '100vh', // Hauteur totale de l'écran
+            },
+            width: {
+                'screen': '100vw', // Largeur totale de l'écran
+            },
         },
     },
 
