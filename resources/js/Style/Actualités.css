@@ -194,6 +194,7 @@
     }
     .actualite-container{
       width: 100%;
+      margin: 0 auto;
       /* border: 2px solid; */
 
     }
@@ -202,10 +203,10 @@
     }
     .actualite-header p{
       font-size: 15px;
-      margin-left: 10px;
+      margin-right: 10px;
     }
     .actualite-list{
-      margin-left: 20px;
+      /* margin-left: 20px; */
       width: 80%;
       /* border: 2px solid; */
       margin: 0 auto;
