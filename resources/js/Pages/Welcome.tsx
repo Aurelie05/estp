@@ -12,7 +12,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { FaRegCalendarCheck } from "react-icons/fa6";
 import slide2 from '@/Assets/image1 (4).jpg'
 import table from '@/Assets/INP-HB_files/ESTP.42cfd471c3b024fce655.png'
-// import Footer from '@/Layouts/Footer';
+import Footer from '@/Layouts/Footer';
 import image2 from '@/Assets/INP-HB_files/cycles.png'
 import image3 from '@/Assets/INP-HB_files/cycle3.jpg'
 import image4 from '@/Assets/INP-HB_files/cycles2.png'
@@ -229,7 +229,7 @@ export default function Welcome({
 
                 </div>
 
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </Guest>
     );
 }
