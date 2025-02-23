@@ -188,17 +188,10 @@
     width: 100%; /* S'étend sur toute la largeur */
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    html {
     
-      width: 100%;
-      height: 100%;
-      /* border: 4px solid; */
-      /* overflow-y: hidden; */
-      overflow-x: hidden; 
-  }      
+       
   body{
-  margin: 0;
-      padding: 0;
+  overflow: hidden;
   }
     .actualite-container{
       width: 100%;

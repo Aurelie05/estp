@@ -251,6 +251,9 @@
     width: 100%; /* S'étend sur toute la largeur */
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
+    body{
+      overflow: hidden; 
+    }
     .blurred-image-container{
       width: 100%;
       height: 300px;
