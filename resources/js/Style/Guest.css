@@ -168,6 +168,7 @@
     align-items: center;
     height: 80px;
     /* overflow: hidden; */
+    overflow-x: hidden; 
     padding: 0 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgb(255, 255, 255);
