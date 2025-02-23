@@ -333,9 +333,12 @@
 
     }
     body{
-      /* width: 100vw; */
-      /* border: 5px solid red; */
-    }
+      border: 4px solid;
+      margin: 0;
+      overflow: auto;
+      overflow-x: hidden; 
+      padding: 0;
+  }
     .page-formation-alt h1{
       font-size: 18px;
     }

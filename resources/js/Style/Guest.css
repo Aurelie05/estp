@@ -161,14 +161,11 @@
     display: flex;
     margin: 0; /* Évite les marges inattendues */
     transform: translateY(0);
-    left: 0;
-    /* display: block; */
-    /* border: 2px solid red; */
     justify-content: space-between; 
     align-items: center;
     height: 80px;
-    /* overflow: hidden; */
-    overflow-x: hidden; 
+    overflow: hidden;
+    /* overflow-x: hidden;  */
     padding: 0 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgb(255, 255, 255);
