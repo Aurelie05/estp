@@ -154,6 +154,9 @@
      
     /* Navbar fixe */
 .navbar2 {
+    
+}
+.navbardeux{
     position: fixed;
     top: 0;
     width: 100%;
@@ -168,15 +171,6 @@
     /* overflow-x: hidden;  */
     padding: 0 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: rgb(255, 255, 255);
-}
-.navbardeux{
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    justify-content: space-between; 
-    align-items: center;
-    height: 80px;
     background-color: rgb(255, 255, 255);
 }
 
