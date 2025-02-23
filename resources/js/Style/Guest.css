@@ -27,7 +27,7 @@
     /* border: 1px solid; */
     /* border: 1px solid red; */
 }
-.navbar2{
+.navbardeux{
     display: none;
 }
 /* Navbar fixe */
@@ -153,9 +153,7 @@
     
      
     /* Navbar fixe */
-.navbar2 {
-    
-}
+
 .navbardeux{
     position: fixed;
     top: 0;
