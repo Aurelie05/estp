@@ -194,6 +194,7 @@
     }
     .actualite-container{
       width: 100%;
+      border: 2px solid;
 
     }
     .actualite-header h1{
@@ -204,7 +205,7 @@
     }
     .actualite-list{
       width: 80%;
-      border: 2px solid;
+      /* border: 2px solid; */
       margin: 0 auto;
     }
     .footer-container{
