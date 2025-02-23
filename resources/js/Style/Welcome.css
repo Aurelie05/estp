@@ -567,7 +567,7 @@
     body{
         /* border: 4px solid; */
        
-        overflow-x: hidden; 
+        overflow: hidden; 
         
     }
     .welcomecontainer{
