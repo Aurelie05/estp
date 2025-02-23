@@ -334,8 +334,8 @@
     body{
       /* border: 4px solid; */
       margin: 0;
-      overflow: auto;
-      /* overflow-x: hidden;  */
+      /* overflow: auto; */
+      overflow-x: hidden; 
       padding: 0;
   }
     .page-formation-alt h1{
