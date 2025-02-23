@@ -2,9 +2,10 @@
 /* @tailwind components; */
 /* @tailwind utilities; */
 body {
-    /* margin: 0; */
-    /* padding: 0; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
     /* background-color: #f8f9fa; */
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     border:4px solid  ;
 }
