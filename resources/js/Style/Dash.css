@@ -133,17 +133,16 @@ body{
     font-size: 25px;
   }
   .aside {
-    /* position: fixed; */
-    width: 200px;
-    overflow-y: auto;
-    position: absolute;
+    position: fixed;
+    width: 100%;
+    /* overflow-y: auto; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     top: 18px;
-    height: 100%;
+    z-index: 999;
+    height: 300px;
     display: flex;
-    border-bottom-right-radius: 30px;
-    border-top-right-radius: 30px;
-    flex-direction: column;
-    padding: 20px;
     transform: translateX(0); 
     transition: transform 0.5s ease-in-out; 
     /* transition: left 1.9s ease-in-out, opacity 0.9s ease-in-out; */

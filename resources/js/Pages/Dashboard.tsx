@@ -91,10 +91,7 @@ export default function Dashboard() {
                 {menuOpen && (
                 <>  
                 <div className='aside'>
-                  <div className="logo">
-                    <img src={logo} alt="" />
-                    ESTP
-                  </div>
+                  
                   <nav>
                     <ul>
                       <li onClick={ () => window.open('/dashboard','_self')}>Dashboard</li>
