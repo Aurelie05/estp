@@ -333,8 +333,8 @@
       
     }
     body{
-      overflow: auto; 
-      /* height: 1000px; */
+      overflow-x: hidden; 
+      height: 2100px;
       /* border: 2px solid; */
     }
    
