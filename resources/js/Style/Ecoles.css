@@ -333,7 +333,7 @@
       
     }
     body{
-      overflow-x: hidden; 
+      overflow: auto; 
       /* height: 1000px; */
       /* border: 2px solid; */
     }
