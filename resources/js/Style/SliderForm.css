@@ -81,3 +81,22 @@
     transform: scale(0.95); /* active:scale-95 */
   }
   
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+
+    .form-container{
+        margin: 0 auto;
+        width: 70%;
+    }
+     
+    
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .form-container{
+        margin: 0 auto;
+        width: 80%;
+    }
+     
+    
+  }
