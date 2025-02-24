@@ -132,54 +132,78 @@ body{
     display: block;
     font-size: 25px;
   }
-  .aside {
-    position: fixed;
-    width: 80%;
-    margin: 0 auto;
-    /* overflow-y: auto; */
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    top: 80px;
-    z-index: 999;
-    height: 200px;
-    display: flex;
-    transform: translateX(0); 
-    transition: transform 0.5s ease-in-out; 
-    /* transition: left 1.9s ease-in-out, opacity 0.9s ease-in-out; */
-    background-color: #999591;
-  }
-  .aside.show {
-    transform: translateX(100); /* Position finale à l'intérieur de l'écran */
-  }
-  
-  
-  .aside .logo {
-    width: 100%;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    padding: 10 auto;
-    align-items: center;
-    justify-content: center;
-    object-fit: cover;
-    margin-bottom: 20px;
-    /* border: 1px solid; */
-  }
-  .logo img {
-    width: 30%;
-    padding: 20px;
-    /* height: 50%; */
-  }
-  .aside ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    
-  }
+  /* Top-bar fixée */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Menu latéral animé */
+.aside {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 75%;
+  height: calc(100% - 70px);
+  background-color: #3b3b3b;
+  border-radius: 0 15px 15px 0;
+  padding: 20px;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Liste des menus */
+.aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aside li {
+  padding: 15px 10px;
+  color: white;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.aside li:hover {
+  background: #505050;
+  border-radius: 8px;
+}
+
+/* Barre de recherche */
+.search-bar {
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Bouton Menu */
+.menu-button {
+  cursor: pointer;
+  color: #333;
+}
+
+/* Animation d'ouverture */
+.aside-enter {
+  transform: translateX(-100%);
+}
+
+.aside-enter-active {
+  transform: translateX(0%);
+  transition: transform 300ms ease-in-out;
+}
+
   
   .aside ul li {
     padding: 10px 0;
