@@ -32,7 +32,7 @@ export default function Authenticated({
               <li onClick={ () => window.open('/events','_self')}>Evenement</li>
               <li onClick={ () => window.open('/information','_self')}>Information</li>
               <li onClick={ () => window.open('/filieres','_self')}>Filiere</li>
-              
+              <li onClick={ () => window.open('/','_self')}>Quitter</li>
             </ul>
           </nav>
         </aside>

@@ -49,7 +49,7 @@ export default function SliderPage() {
             href="/sliders/create"
             className="bg-blue-500 text-white px-4 py-2 rounded"
           >
-            Add Slider
+            Ajouter Slider
           </Link>
           <div className='menu2 ' onClick={toggleMenu}>
               {menuOpen ? <BiMenu /> : <TbMenuDeep />}
@@ -85,10 +85,7 @@ export default function SliderPage() {
         {menuOpen && (
                 <>  
                 <div className='aside'>
-                  <div className="logo">
-                    <img src={logo} alt="" />
-                    ESTP
-                  </div>
+                  
                   <nav>
                     <ul>
                       <li onClick={ () => window.open('/dashboard','_self')}>Dashboard</li>

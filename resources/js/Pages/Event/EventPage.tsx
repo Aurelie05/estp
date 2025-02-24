@@ -53,7 +53,7 @@ export default function EventPage() {
             <div className="header">
                 <h1 className="title">Événements</h1>
                 <Link href="/events/create" className="btn-add">
-                    Add Event
+                    Ajouter Evenement
                 </Link>
             </div>
 
