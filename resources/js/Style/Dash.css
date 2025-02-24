@@ -134,12 +134,13 @@ body{
   }
   .aside {
     position: fixed;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     /* overflow-y: auto; */
     justify-content: center;
     align-items: center;
     align-content: center;
-    top: 18px;
+    top: 50px;
     z-index: 999;
     height: 300px;
     display: flex;
