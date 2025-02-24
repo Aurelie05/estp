@@ -134,15 +134,15 @@ body{
   }
   .aside {
     position: fixed;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     /* overflow-y: auto; */
     justify-content: center;
     align-items: center;
     align-content: center;
-    top: 50px;
+    top: 80px;
     z-index: 999;
-    height: 300px;
+    height: 200px;
     display: flex;
     transform: translateX(0); 
     transition: transform 0.5s ease-in-out; 
