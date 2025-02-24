@@ -5,6 +5,7 @@ import TextInput from '@/Components/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
 import { Head, Link, useForm } from '@inertiajs/react';
 import { FormEventHandler } from 'react';
+import '@/Style/Register.css'
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -24,15 +25,11 @@ export default function Register() {
     return (
         <div className="glass-wrapper">
             <Head title="Register" />
-
             <div className="glass-card">
-                <div className="profile-icon">
-                    <span>🔒</span>
-                </div>
-
+                <div className="profile-icon">👤</div>
                 <form onSubmit={submit} className="form-container">
                     <div className="input-group">
-                        <InputLabel htmlFor="name" value="Name" />
+                        <InputLabel htmlFor="name" value="Name" className="input-icon" />
                         <TextInput
                             id="name"
                             name="name"
@@ -47,7 +44,7 @@ export default function Register() {
                     </div>
 
                     <div className="input-group">
-                        <InputLabel htmlFor="email" value="Email" />
+                        <InputLabel htmlFor="email" value="Email" className="input-icon" />
                         <TextInput
                             id="email"
                             type="email"
@@ -62,7 +59,7 @@ export default function Register() {
                     </div>
 
                     <div className="input-group">
-                        <InputLabel htmlFor="password" value="Password" />
+                        <InputLabel htmlFor="password" value="Password" className="input-icon" />
                         <TextInput
                             id="password"
                             type="password"
@@ -77,7 +74,7 @@ export default function Register() {
                     </div>
 
                     <div className="input-group">
-                        <InputLabel htmlFor="password_confirmation" value="Confirm Password" />
+                        <InputLabel htmlFor="password_confirmation" value="Confirm Password" className="input-icon" />
                         <TextInput
                             id="password_confirmation"
                             type="password"
@@ -92,17 +89,14 @@ export default function Register() {
                     </div>
 
                     <div className="options">
-                        <Link
-                            href={route('login')}
-                            className="forgot-password"
-                        >
+                        <Link href={route('login')} className="forgot-password">
                             Already registered?
                         </Link>
                     </div>
 
-                    <PrimaryButton className="glass-button mt-4" disabled={processing}>
+                    <button type="submit" className="glass-button" disabled={processing}>
                         Register
-                    </PrimaryButton>
+                    </button>
                 </form>
             </div>
         </div>
