@@ -42,7 +42,7 @@
 .presentation-section {
     position: absolute;
     /* top: 30px; */
-    bottom: -170px;
+    bottom: -160px;
     padding: 50px 20px;
     display: flex;
     justify-content: center;
@@ -430,6 +430,6 @@
   .presentation-section{
     width: 90%;
     position: absolute;
-    /* top: 10px; */
+    /* top: 6px; */
   }
 }
