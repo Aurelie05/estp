@@ -1,6 +1,6 @@
 .footer-container {
     position: absolute;
-    top: 3000px;
+    top: 3300px;
     display: flex;
     flex-direction: row; 
     justify-content: space-between; /* Sépare le contenu principal du bas */
