@@ -770,7 +770,7 @@
     }
     .imageslider{
         width: 100%;
-        height: 300px;
+        height: 500px;
         position: relative;
         /* border: 3px solid; */
     }
@@ -789,37 +789,40 @@
 
     }
     .text-box h1 {
-        font-size: 20px;
+        font-size: 25px;
     }
     /* .text-box span {
         font-size: 15px;
     } */
     .text-box p {
-        font-size: 13px;
+        font-size: 18;
     }
     .text-box li {
-        font-size: 13px;
+        font-size: 18;
     }
     .events-container{
         position: absolute;
-        top: 770px; 
+        top: 800px; 
         /* border: 1px solid; */
     }
     .events-title{
         /* position: absolute; */
         /* top: 100px; */
-        font-size: 20px;
+        font-size: 25px;
     }
     .box4{
          position: absolute;
-        top: 1650px; 
+        top: 1350px; 
         /* border: 1px solid; */
     }
     .box4 h2 {
-        font-size: 20px;
+        font-size: 25px;
     }
     .boxliste h1{
-        font-size: 20px;
+        font-size: 25px;
+    }
+    .boxliste ul{
+        font-size: 18px;
     }
     
     .boximage{
@@ -827,32 +830,32 @@
     }
     .box5{
         position: absolute;
-        top: 1900px; 
+        top: 1750px;
     }
     .boximage2{
         width: 40%;
     }
     .box6{
         position: absolute;
-        top: 2300px; 
+        top: 2400px; 
         /* border: 1px solid;  */
     }
     .box6 h2{
-        font-size: 20px;
+        font-size: 25px;
         /* position: absolute; */
         /* top: 1000px;  */
         /* border: 1px solid;  */
 
     }
     .boxliste p{
-        font-size: 15px;
+        font-size: 18px;
     }
     .boxliste h1{
-        font-size: 15px;
+        font-size: 20px;
     }
     .box7{
         position: absolute;
-        top: 2550px; 
+        top: 2800px; 
         /* border: 1px solid;  */
     }
      

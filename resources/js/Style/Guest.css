@@ -73,16 +73,18 @@
     align-content: center;
     justify-content: center;
     display: flex;
+    /* border: 2px solid; */
     /* display: none; */
     padding: 20px;
     gap: 30px;
     /* border: 1px solid; */
-    font-size: 20px;
+    font-size: 30px;
     /* background-color: rgba(255, 0, 0, 0.1); */
     font-family: "Roboto", serif;
     cursor: pointer;
 }
 .menu{
+    font-size: 20px;
     /* width: 20%; */
     color: rgb(0, 0, 0);
 }
@@ -269,15 +271,22 @@
 
 @media screen and (min-width:768px) and (max-width:1440px) {
 		
-    .navbar2{
+    .navbardeux{
         /* width: 100%; */
         display: none;
 
     }
     .navbar{
+        
         width: 100%;
-        /* display: none; */
+        
+        /* border: 5px solid red; */
 
+    }
+    .menusection{
+        font-size: 30px;
+        display: flex;
+        /* display: block; */
     }
     .logosection{
         width: 20%;
