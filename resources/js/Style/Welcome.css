@@ -764,7 +764,7 @@
  }
  
  /* Écrans moyens (tablette) */
- @media (min-width: 768px) and (max-width: 1023px) {
+ @media (min-width: 768px) and (max-width: 1440px) {
     .welcomecontainer{
         width: 100%;
     }
@@ -857,23 +857,23 @@
     }
      
  }
- @media (min-width: 1024px) and (max-width: 1440px) {
+
+ /* @media (min-width: 1025px) and (max-width: 1440px) {
     .imageslider{
         width: 100%;
         height: 400px;
     }
     .text-box{
         position: absolute;
-        /* top: -80px; */
+       
         width: 70%;
-        /* margin: 0 auto; */
+        
         height: 300px;
-        /* position: absolute; */
+        
         bottom: -40px; 
         left: 50%;
         color: #000;
-        /* bottom: 5px; */
-        /* border: 2px solid red; */
+      
 
     }
     .box7{
@@ -887,4 +887,4 @@
     
     
     
-}
+} */
