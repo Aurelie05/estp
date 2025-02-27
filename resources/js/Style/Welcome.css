@@ -33,7 +33,7 @@
     justify-content: center;
     display: flex;
     margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain;
     /* border: 1px solid; */
     display: block;
     /* background-color: brown; */
