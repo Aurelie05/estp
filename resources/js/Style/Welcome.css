@@ -935,11 +935,12 @@
     .imageslider{
         width: 100%;
         /* overflow: hidden; */
-        height: 500px;
+        height: 800px;
         align-items: center;
         justify-content: center;
         align-content: center;
         overflow: hidden;
+        border: 1px solid;
     }
     .imageslider img {
         width: 100%;
@@ -950,13 +951,13 @@
         display: flex;
         margin: 0 auto;
         object-fit: cover;
-        /* border: 1px solid; */
+        
         display: block;
         /* background-color: brown; */
     }
     .text-box{
         /* width: 100%; */
-        height: 500px;
+        height: 560px;
         position: absolute;
         top: 500px ;
     }
