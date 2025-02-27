@@ -933,8 +933,26 @@
 @media screen and (min-width: 1441px) {
     /* Styles pour les écrans ultra-wide */
     .imageslider{
-        height: 100%;
-        /* border: 2px solid; */
+        width: 100%;
+        /* overflow: hidden; */
+        height: 500px;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        overflow: hidden;
+    }
+    .imageslider img {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        margin: 0 auto;
+        object-fit: cover;
+        /* border: 1px solid; */
+        display: block;
+        /* background-color: brown; */
     }
     .text-box{
         /* width: 100%; */
