@@ -769,7 +769,7 @@
     .imageslider{
         width: 100%;
         height: 400px;
-        border: 2px solid;
+        /* border: 2px solid; */
     }
     .text-box{
         /* background-color: #000000; */
@@ -830,134 +830,112 @@
 /* Petits ordinateurs portables */
 @media screen and (min-width: 769px) and (max-width: 992px) {
     /* Styles pour les petits laptops */
-  }
-  
- /* Écrans moyens (tablette) */
- @media (min-width: 768px) and (max-width: 1440px) {
-    .welcomecontainer{
-        width: 100%;
-    }
-    .imageslider{
-        width: 100%;
-        height: 500px;
-        position: relative;
-        /* border: 3px solid; */
-    }
-    .text-box{
-        position: absolute;
-        /* top: -80px; */
-        width: 70%;
-        /* margin: 0 auto; */
-        height: 300px;
-        /* position: absolute; */
-        bottom: -60px; 
-        left: 50%;
-        color: #000;
-        /* bottom: 5px; */
-        /* border: 2px solid red; */
-
-    }
-    .text-box h1 {
-        font-size: 25px;
-    }
-    /* .text-box span {
-        font-size: 15px;
-    } */
-    .text-box p {
-        font-size: 18;
-    }
-    .text-box li {
-        font-size: 18;
-    }
-    .events-container{
-        position: absolute;
-        top: 800px; 
-        /* border: 1px solid; */
-    }
-    .events-title{
-        /* position: absolute; */
-        /* top: 100px; */
-        font-size: 25px;
+    .text-box h1{
+        font-size: 20px;
+        /* background-color: #000; */
     }
     .box4{
-         position: absolute;
-        top: 1350px; 
-        /* border: 1px solid; */
-    }
-    .box4 h2 {
-        font-size: 25px;
-    }
-    .boxliste h1{
-        font-size: 25px;
-    }
-    .boxliste ul{
-        font-size: 18px;
-    }
-    
-    .boximage{
-        width: 40%;
-    }
-    .box5{
         position: absolute;
-        top: 1750px;
-    }
-    .boximage2{
-        width: 40%;
-    }
-    .box6{
-        position: absolute;
-        top: 2400px; 
-        /* border: 1px solid;  */
-    }
-    .box6 h2{
-        font-size: 25px;
-        /* position: absolute; */
-        /* top: 1000px;  */
-        /* border: 1px solid;  */
+       top: 1850px; 
+       /* border: 1px solid; */
+   }
+   .box4 h2{
+    font-size: 20px;
+   }
+   .boximage{
+    width: 40%;
+    /* border: 2px solid; */
+}
+.events-title{
+    font-size: 20px;
+}
+.line2{
+    font-size: 20px;
+}
 
-    }
-    .boxliste p{
-        font-size: 18px;
-    }
-    .boxliste h1{
-        font-size: 20px;
-    }
-    .box7{
-        position: absolute;
-        top: 2800px; 
-        /* border: 1px solid;  */
-    }
-     
- }
+.box5{
+    position: absolute;
+    top: 2100px;
+}
+.boximage2{
+    width: 40%;
+    /* border: 2px solid; */
+}
+.box6{
+    position: absolute;
+    top: 2600px;
+}
+.box6 h2{
+   font-size: 20px;
+}
+.box7{
+    position: absolute;
+    top: 2860px;
+}
+}
 
- /* @media (min-width: 1025px) and (max-width: 1440px) {
-    .imageslider{
-        width: 100%;
-        height: 400px;
+/* Ordinateurs portables standard */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    /* Styles pour les laptops */
+    .text-box h1{
+        font-size: 25px;
+        /* background-color: red; */
     }
+    .box4{
+        position: absolute;
+       top: 1450px; 
+       /* border: 1px solid; */
+   }
+   .box4 h2{
+    font-size: 25px;
+   }
+   .boximage{
+    width: 40%;
+    /* border: 2px solid; */
+}
+.events-title{
+    font-size: 25px;
+}
+.line2{
+    font-size: 25px;
+}
+
+.box5{
+    position: absolute;
+    top: 1780px;
+}
+.boximage2{
+    width: 40%;
+    /* border: 2px solid; */
+}
+.box6{
+    position: absolute;
+    top: 2400px;
+}
+.box6 h2{
+   font-size: 25px;
+}
+.box7{
+    position: absolute;
+    top: 2730px;
+}
+}
+
+/* Grands écrans de bureau */
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+    /* Styles pour les grands écrans */
     .text-box{
-        position: absolute;
-       
-        width: 70%;
-        
-        height: 300px;
-        
-        bottom: -40px; 
-        left: 50%;
-        color: #000;
-      
-
+        background-color: red;
     }
-    .box7{
-        width: 80%;
-        height: 300px;
-        margin: 0 auto;
-        position: absolute;
-        top: 2650px;
-        z-index: 1;
-    }
-    
-    
-    
-} */
+  }
 
+  /* Écrans extra-larges (4K et plus) */
+@media screen and (min-width: 1441px) {
+    /* Styles pour les écrans ultra-wide */
+  }
+  
+  
+  
+  
+ 
+ 
