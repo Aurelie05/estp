@@ -315,5 +315,9 @@
 
 	
  
+@media screen and (min-width: 1441px) {
+    .menu{
+        font-size: 30px;
+    }
 
-	
+}	
