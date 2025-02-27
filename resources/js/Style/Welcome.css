@@ -933,7 +933,7 @@
 @media screen and (min-width: 1441px) {
     /* Styles pour les écrans ultra-wide */
     .imageslider{
-        height: 500px;
+        height: 100%;
         /* border: 2px solid; */
     }
     .text-box{
