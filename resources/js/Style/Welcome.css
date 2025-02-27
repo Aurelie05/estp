@@ -945,12 +945,9 @@
     .imageslider img {
         width: 100%;
         height: auto;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        display: flex;
-        margin: 0 auto;
-        object-fit: cover;
+        /* display: flex; */
+        /* margin: 0 auto; */
+        object-fit: contain;
         
         display: block;
         /* background-color: brown; */
