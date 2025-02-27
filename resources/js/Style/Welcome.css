@@ -935,16 +935,16 @@
     .imageslider{
         width: 100%;
         /* overflow: hidden; */
-        height: 800px;
+        height: 700px;
         align-items: center;
         justify-content: center;
         align-content: center;
         overflow: hidden;
-        border: 1px solid;
+        /* border: 1px solid; */
     }
     .imageslider img {
         width: 100%;
-        height: auto;
+        height: 100%;
         /* display: flex; */
         /* margin: 0 auto; */
         object-fit: contain;
