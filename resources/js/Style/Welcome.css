@@ -823,11 +823,15 @@
     }
     .box7{
         position: absolute;
-        top: 3150px;
+        top: 3100px;
     }
   }
   
-
+/* Petits ordinateurs portables */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* Styles pour les petits laptops */
+  }
+  
  /* Écrans moyens (tablette) */
  @media (min-width: 768px) and (max-width: 1440px) {
     .welcomecontainer{
