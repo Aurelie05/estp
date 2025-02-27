@@ -284,9 +284,12 @@
 
     }
     .menusection{
-        font-size: 30px;
+        /* font-size: 30px; */
         display: flex;
         /* display: block; */
+    }
+    .menu{
+        font-size: 17px;
     }
     .logosection{
         width: 20%;
