@@ -316,6 +316,9 @@
 	
  
 @media screen and (min-width: 1441px) {
+    .navbar{
+        height: 100px;
+    }
     .menu{
         font-size: 30px;
     }
