@@ -31,13 +31,14 @@
     display: none;
 }
 /* Navbar fixe */
-/* .navbar1 {
+.navbar {
     position: fixed;
     top: 0;
+    height: 80px;
     width: 100%;
     z-index: 1000;
     transition: transform 0.3s ease-in-out;
-} */
+}
 
 /* Visible */
 .navbar.visible {
@@ -316,14 +317,19 @@
 	
  
 @media screen and (min-width: 1441px) {
-    .navbar{
-        height: 100px;
+    .navbar {
+        position: fixed !important; 
+        top: 0;
+        left: 0;
+        height: 80px; /* Ajuste selon la hauteur réelle de ta navbar */
+        width: 100%;
+        z-index: 1000;
+        transform: translateY(0) !important;
     }
     .menu{
         /* font-size: 30px; */
     }
     .logosection{
-        height: 100px;
         width: 30%;
         align-items: center;
         display: flex;
@@ -334,4 +340,5 @@
     .menusection{
         width: 70%;
     }
+    
 }	

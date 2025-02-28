@@ -16,13 +16,19 @@ export default function Guest({ children }: PropsWithChildren) {
     const [lastScrollY, setLastScrollY] = useState(0); // Dernière position de scroll
 
     const handleScroll = () => {
+        if (window.innerWidth >= 1441) {
+            setIsVisible(true); // Toujours visible sur grands écrans
+            return;
+        }
+    
         const currentScrollY = window.scrollY;
-
+    
         if (currentScrollY > lastScrollY) {
             setIsVisible(false); // Cacher la navbar si on défile vers le bas
         } else {
             setIsVisible(true); // Afficher la navbar si on remonte
         }
+    
         setLastScrollY(currentScrollY);
     };
 
