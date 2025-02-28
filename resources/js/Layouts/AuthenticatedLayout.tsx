@@ -1,6 +1,7 @@
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
+import { useForm } from '@inertiajs/react';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link, usePage } from '@inertiajs/react';
 import '@/Style/Auth.css'
@@ -17,6 +18,12 @@ export default function Authenticated({
     children,
 }: PropsWithChildren<{ header?: ReactNode }>) {
     const { user } = usePage().props.auth as { user: User };
+    const { post } = useForm();
+
+    const logout = () => {
+        post(route('logout')); // Envoie une requête POST pour se déconnecter
+    };
+
 
     return (
         <div className="authenticated">
@@ -32,7 +39,7 @@ export default function Authenticated({
               <li onClick={ () => window.open('/events','_self')}>Evenement</li>
               <li onClick={ () => window.open('/information','_self')}>Information</li>
               <li onClick={ () => window.open('/filieres','_self')}>Filiere</li>
-              <li onClick={ () => window.open('/','_self')}>Quitter</li>
+              <li onClick={logout} style={{ cursor: 'pointer', color: 'red' }}>Déconnexion</li>
             </ul>
           </nav>
         </aside>
