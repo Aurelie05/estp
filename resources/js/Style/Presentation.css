@@ -396,7 +396,7 @@
   .presentation-section{
     width: 80%;
     height: 300px;
-    bottom: 500px;
+    bottom: -50px;
     /* top: 10px; */
     /* position: absolute; */
   }

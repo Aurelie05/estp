@@ -85,7 +85,7 @@
     cursor: pointer;
 }
 .menu{
-    font-size: 25px;
+    font-size: 20px;
     /* width: 20%; */
     color: rgb(0, 0, 0);
 }
@@ -295,8 +295,8 @@
     .menu{
         /* width: 25%; */
         /* border: 5px solid red; */
-        font-size: 17px;
-    }
+        font-size: 17px
+        }
     .logosection{
         width: 20%;
         display: flex;
