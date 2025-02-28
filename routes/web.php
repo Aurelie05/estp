@@ -117,7 +117,9 @@ Route::get('/', [AdminController::class, 'index2'])->name('filiere.create');
 Route::get('/',[AdminController::class, 'welcome'])->name('welcome');
 Route::get('/ecole',[AdminController::class, 'ecoles'])->name('ecoles');
 
+Auth::routes(['register' => false]);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 });
+

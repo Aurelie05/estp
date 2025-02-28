@@ -40,6 +40,7 @@ const Ecoles = () => {
                     ))}
                 </div>
             {/* </div> */}
+            
 
         <div className="page-formation-alt2">
           <h1>Cycle Ingénieur<FaCircleArrowDown /></h1>

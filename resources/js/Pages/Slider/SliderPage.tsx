@@ -51,9 +51,7 @@ export default function SliderPage() {
           >
             Ajouter Slider
           </Link>
-          <div className='menu2 ' onClick={toggleMenu}>
-              {menuOpen ? <BiMenu /> : <TbMenuDeep />}
-          </div>
+          
         </div>
 
         <ul>
@@ -82,24 +80,7 @@ export default function SliderPage() {
         </ul>
 
 
-        {menuOpen && (
-                <>  
-                <div className='aside'>
-                  
-                  <nav>
-                    <ul>
-                      <li onClick={ () => window.open('/dashboard','_self')}>Dashboard</li>
-                      <li onClick={ () => window.open('/sliders','_self')}>Slider</li>
-                      <li onClick={ () => window.open('/events','_self')}>Evenement</li>
-                      <li onClick={ () => window.open('/information','_self')}>Information</li>
-                      <li onClick={ () => window.open('/filieres','_self')}>Filiere</li>
-                      
-                    </ul>
-                  </nav>
-                </div>
-                </>
-
-                )}
+        
       </div>
     </Authenticated>
   );
