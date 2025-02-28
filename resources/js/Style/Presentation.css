@@ -306,7 +306,7 @@
   
 
   
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .presentation-container{
     width: 100%;
     /* border: 4px solid; */
@@ -383,7 +383,9 @@
     /* border: 1px solid violet; */
   }
  }
- @media screen and (min-width: 768px) and (max-width: 1440px) {
+ /* Petits ordinateurs portables */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  /* Styles pour les petits laptops */
   .presentation-container{
     width: 100%;
     /* border: 4px solid; */
@@ -396,7 +398,7 @@
   .presentation-section{
     width: 80%;
     height: 300px;
-    bottom: -50px;
+    bottom: 500px;
     /* top: 10px; */
     /* position: absolute; */
   }
@@ -422,7 +424,95 @@
   }
 
 
- }
+}
+
+/* Ordinateurs portables standard */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  /* Styles pour les laptops */
+  .presentation-container{
+    width: 100%;
+    /* border: 4px solid; */
+  }
+  .blurred-image-container{
+    width: 100%;
+    height:500px;
+    /* border: 5px solid red; */
+  }
+  .presentation-section{
+    width: 80%;
+    height: 300px;
+    bottom: 500px;
+    /* top: 10px; */
+    /* position: absolute; */
+  }
+  .director-image{
+    width: 30%;
+  }
+  .director-content{
+    width: 70%;
+    
+  }
+  .director-title{
+    font-size: 20px;
+  }
+  .director-text{
+    width: 100%;
+    /* border: 2px solid; */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-align: justify; /* Justifie le texte */
+    white-space: normal; /* Permet le retour automatique à la ligne */
+    word-wrap: break-word; /* S'assure que les mots longs ne débordent pas */
+    overflow-wrap: break-word; 
+    font-size: 18px;
+  }
+
+
+}
+
+/* Grands écrans de bureau */
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  /* Styles pour les grands écrans */
+  .presentation-container{
+    width: 100%;
+    /* border: 4px solid; */
+  }
+  .blurred-image-container{
+    width: 100%;
+    height:500px;
+    /* border: 5px solid red; */
+  }
+  .presentation-section{
+    width: 80%;
+    height: 300px;
+    bottom: 500px;
+    /* top: 10px; */
+    /* position: absolute; */
+  }
+  .director-image{
+    width: 30%;
+  }
+  .director-content{
+    width: 70%;
+    
+  }
+  .director-title{
+    font-size: 20px;
+  }
+  .director-text{
+    width: 100%;
+    /* border: 2px solid; */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-align: justify; /* Justifie le texte */
+    white-space: normal; /* Permet le retour automatique à la ligne */
+    word-wrap: break-word; /* S'assure que les mots longs ne débordent pas */
+    overflow-wrap: break-word; 
+    font-size: 18px;
+  }
+
+
+}
+
+
 
  @media screen and (min-width: 1441px) {
   /* Styles pour les écrans ultra-wide */
