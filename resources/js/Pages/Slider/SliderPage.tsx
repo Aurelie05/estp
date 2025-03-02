@@ -3,6 +3,7 @@ import { usePage } from '@inertiajs/react';
 import logo from '@/Assets/ESTP.f30db3437790b8dbc7d7.png';
 import { Inertia } from '@inertiajs/inertia';
 import { BiMenu } from "react-icons/bi";
+import { router } from "@inertiajs/react";
 import { TbMenuDeep } from "react-icons/tb";
 import { useEffect, useState } from 'react'; // Import de useState et useEffect
 import Authenticated from '@/Layouts/AuthenticatedLayout';
@@ -16,18 +17,17 @@ interface Slider {
 }
 
 export default function SliderPage() {
-  const { slider = [] } = usePage().props as { slider?: Slider[] }; // Récupère les données depuis Inertia
-  const [sliders, setSliders] = useState<Slider[]>(slider); // Initialisez l'état local avec les sliders reçus
+  const { sliders = [] } = usePage().props as { sliders?: Slider[] }; // Récupère les données depuis Inertia
+  const [localSliders, setLocalSliders] = useState<Slider[]>(sliders); // État local
 
-  
   // Fonction pour gérer la suppression d'un slider
   const handleDelete = (id: number) => {
     if (confirm('Êtes-vous sûr de vouloir supprimer ce slider ?')) {
-      // Effectuer la suppression via une requête Inertia
+      // Effectuer la suppression via Inertia
       Inertia.delete(`/sliders/${id}`, {
         onSuccess: () => {
-          // Met à jour l'état local après suppression, en filtrant le slider supprimé
-          Inertia.visit('/SliderPage');
+          // Rafraîchir uniquement la liste des sliders, sans recharger toute la page
+          Inertia.reload({ only: ['sliders'] });
         },
       });
     }
