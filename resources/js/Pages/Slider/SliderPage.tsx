@@ -17,18 +17,17 @@ interface Slider {
 }
 
 export default function SliderPage() {
-  const { slider = [] } = usePage().props as { slider?: Slider[] }; // Récupère les données depuis Inertia
-  const [sliders, setSliders] = useState<Slider[]>(slider); // Initialisez l'état local avec les sliders reçus
+  const { slider = [] } = usePage().props as { slider?: Slider[] }; 
 
   
-  // Fonction pour gérer la suppression d'un slider
-  const handleDelete = (id: number) => {
+   // Fonction pour gérer la suppression d'un slider
+   const handleDelete = (id: number) => {
     if (confirm('Êtes-vous sûr de vouloir supprimer ce slider ?')) {
-      // Effectuer la suppression via une requête Inertia
       Inertia.delete(`/sliders/${id}`, {
         onSuccess: () => {
-          // Met à jour l'état local après suppression, en filtrant le slider supprimé
-          Inertia.visit('/SliderPage');
+         
+          // Rafraîchir uniquement les données 'slider'
+          Inertia.reload({ only: ['slider'] });
         },
       });
     }
@@ -56,8 +55,8 @@ export default function SliderPage() {
         </div>
 
         <ul>
-          {sliders.length > 0 ? (
-            sliders.map((item) => (
+          {slider.length > 0 ? (
+            slider.map((item) => (
               <li key={item.id} className="mb-4">
                 <h3 className="font-semibold">{item.titre}</h3>
                 <img

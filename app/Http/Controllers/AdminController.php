@@ -98,23 +98,21 @@ class AdminController extends Controller
 
    // Supprimer un slider
    public function destroy($id)
-   {
-       $slider = Slider::find($id);
+{
+    $slider = Slider::find($id);
 
-       if (!$slider) {
-           return Inertia::render('SliderPage', [
-               'message' => 'Slider non trouvé',
-               'sliders' => Slider::all(),
-           ]);
-       }
+    if (!$slider) {
+        return response()->json([
+            'message' => 'Slider non trouvé',
+        ], 404); // Retourne une réponse JSON avec un statut 404
+    }
 
-       $slider->delete(); // Supprimer le slider
+    $slider->delete(); // Supprimer le slider
 
-       // Retourner les données mises à jour à Inertia
-        return Inertia::render('SliderPage', [
-        'sliders' => Slider::all(),
+    // Retourne une réponse JSON pour Inertia
+    return response()->json([
         'message' => 'Slider supprimé avec succès',
-        ]);
+    ], 200); // Statut 200 pour indiquer que tout s'est bien passé
 }
    
 
