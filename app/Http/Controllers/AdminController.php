@@ -110,9 +110,12 @@ class AdminController extends Controller
 
        $slider->delete(); // Supprimer le slider
 
-       // Retourner une réponse Inertia après la suppression
-       return redirect()->route('sliderPage')->with('success', 'Slider supprimé avec succès');
-   }
+       // Retourner les données mises à jour à Inertia
+        return Inertia::render('SliderPage', [
+        'sliders' => Slider::all(),
+        'message' => 'Slider supprimé avec succès',
+        ]);
+}
    
 
    
