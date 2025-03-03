@@ -365,11 +365,15 @@ public function ecoles()
 // Affichage des actualités
 public function actualite()
 {
+    // Récupérer les actualités
     $actualites = Actualite::latest()->get();
-    return Inertia::render('Actualite/ActualitePage', [
+
+    // Retourner la vue avec les actualités
+    return Inertia::render('Actualités/ActualitePage', [
         'actualites' => $actualites, // Envoi des actualités à Inertia
     ]);
 }
+
 
 // Ajout d'une actualité
 public function storeActualite(Request $request)
@@ -408,14 +412,17 @@ public function deleteActualite($id)
         'message' => 'Actualité supprimée avec succès !'
     ]);
 }
+// Affichage des actualités pour une autre page (Actualités)
 public function actuaffichage()
 {
-      // Récupérer les actualités
-      $actualites = Actualite::latest()->get(); 
- // Retourner la vue avec toutes les données
- return Inertia::render('Actualités', [
-    'actualites' => $actualites, // Ajout des actualités
-]);
+    // Récupérer les actualités
+    $actualites = Actualite::latest()->get();
+
+    // Retourner la vue avec toutes les données
+    return Inertia::render('Actualités', [
+        'actualites' => $actualites, // Envoi des actualités
+    ]);
 }
+
     
 }

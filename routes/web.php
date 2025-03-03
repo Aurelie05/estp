@@ -120,16 +120,22 @@ Route::get('/',[AdminController::class, 'welcome'])->name('welcome');
 Route::get('/ecole',[AdminController::class, 'ecoles'])->name('ecoles');
 
 
-// Routes pour les actualités
-Route::get('/actualites', [AdminController::class, 'actualites'])->name('actualites');
-Route::post('/actualites', [AdminController::class, 'storeActualite'])->name('actualites.store');
-Route::delete('/actualites/{id}', [AdminController::class, 'deleteActualite'])->name('actualites.delete');
+// Route pour afficher toutes les actualités dans la page actualite
+Route::get('/actualites', [AdminController::class, 'actualite'])->name('actualite');
 
+// Route pour afficher la page de création d'actualités
 Route::get('/actualites/create', function () {
     return Inertia::render('Actualités/ActualiteForm');
 })->name('actualites.create');
 
-Route::get('/actualite', [AdminController::class, 'actuaffichage'])->name('actualites.affichage');
+// Route pour ajouter une actualité
+Route::post('/actualites', [AdminController::class, 'storeActualite'])->name('actualites.store');
+
+// Route pour supprimer une actualité
+Route::delete('/actualites/{id}', [AdminController::class, 'deleteActualite'])->name('actualites.delete');
+
+// Route pour afficher toutes les actualités dans la page actualités
+Route::get('/actualites/all', [AdminController::class, 'actuaffichage'])->name('actualites.affichage');
 
 
 
