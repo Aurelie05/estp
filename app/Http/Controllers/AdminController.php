@@ -408,7 +408,7 @@ public function deleteActualite($id)
         'message' => 'Actualité supprimée avec succès !'
     ]);
 }
-public function actualites()
+public function actuaffichage()
 {
       // Récupérer les actualités
       $actualites = Actualite::latest()->get(); 

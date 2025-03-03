@@ -129,6 +129,9 @@ Route::get('/actualites/create', function () {
     return Inertia::render('Actualite/ActualiteForm');
 })->name('actualites.create');
 
+Route::get('/actualites', [AdminController::class, 'actuaffichage'])->name('actualites.affichage');
+
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
