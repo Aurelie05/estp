@@ -18,6 +18,9 @@ export default function ActualitePage() {
   const { actualites = [] } = usePage().props as { actualites?: Actualite[] };
   const [actualitesList, setActualitesList] = useState<Actualite[]>(actualites);
 
+  if (actualites.length === 0) {
+    return <p>Aucune actualité disponible.</p>;
+  }
   useEffect(() => {
     setActualitesList(actualites);
   }, [actualites]);

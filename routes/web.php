@@ -126,10 +126,10 @@ Route::post('/actualites', [AdminController::class, 'storeActualite'])->name('ac
 Route::delete('/actualites/{id}', [AdminController::class, 'deleteActualite'])->name('actualites.delete');
 
 Route::get('/actualites/create', function () {
-    return Inertia::render('Actualite/ActualiteForm');
+    return Inertia::render('Actualités/ActualiteForm');
 })->name('actualites.create');
 
-Route::get('/actualites', [AdminController::class, 'actuaffichage'])->name('actualites.affichage');
+Route::get('/actualite', [AdminController::class, 'actuaffichage'])->name('actualites.affichage');
 
 
 
