@@ -11,6 +11,14 @@
 .menu3{
     display: none;
 }
+.no-underline {
+    color: black;
+    text-decoration: none; /* Enlève le trait en bas des liens */
+}
+.no-underline :hover {
+    color: rgb(126, 7, 224);
+    
+}
 
 .navbar{
     width: 100%;
@@ -85,6 +93,7 @@
     cursor: pointer;
 }
 .menu{
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     /* width: 20%; */
     color: rgb(0, 0, 0);
@@ -284,6 +293,7 @@
        
 
     }
+
     .menusection{
         width: 85%;
         /* border: 2px solid; */
