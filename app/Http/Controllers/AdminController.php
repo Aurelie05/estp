@@ -408,10 +408,10 @@ public function deleteActualite($id)
         'message' => 'Actualité supprimée avec succès !'
     ]);
 }
-public function actu()
+public function actualites()
 {
       // Récupérer les actualités
-      $actualites = Actualite::all();
+      $actualites = Actualite::latest()->get(); 
  // Retourner la vue avec toutes les données
  return Inertia::render('Actualités', [
     'actualites' => $actualites, // Ajout des actualités
