@@ -120,6 +120,15 @@ Route::get('/',[AdminController::class, 'welcome'])->name('welcome');
 Route::get('/ecole',[AdminController::class, 'ecoles'])->name('ecoles');
 
 
+// Routes pour les actualités
+Route::get('/actualites', [AdminController::class, 'actualites'])->name('actualites');
+Route::post('/actualites', [AdminController::class, 'storeActualite'])->name('actualites.store');
+Route::delete('/actualites/{id}', [AdminController::class, 'deleteActualite'])->name('actualites.delete');
+
+Route::get('/actualites/create', function () {
+    return Inertia::render('Actualite/ActualiteForm');
+})->name('actualites.create');
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');

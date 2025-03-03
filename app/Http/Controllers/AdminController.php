@@ -8,6 +8,7 @@ use App\Models\Presentation;
 use App\Models\Evenement;
 use App\Models\Filiere;
 use App\Models\Ecole;
+use App\Models\Actualite;
 use App\Models\Information;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Storage;
@@ -361,7 +362,60 @@ public function ecoles()
     ]);
 }   
 
+// Affichage des actualités
+public function actualite()
+{
+    $actualites = Actualite::latest()->get();
+    return Inertia::render('Actualite/ActualitePage', [
+        'actualites' => $actualites, // Envoi des actualités à Inertia
+    ]);
+}
 
+// Ajout d'une actualité
+public function storeActualite(Request $request)
+{
+    $request->validate([
+        'titre' => 'required|string|max:255',
+        'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        'date' => 'required|date',
+        'lieu' => 'required|string|max:255',
+        'description' => 'required|string',
+    ]);
 
+    $actualite = new Actualite();
+    $actualite->titre = $request->titre;
+    $actualite->date = $request->date;
+    $actualite->lieu = $request->lieu;
+    $actualite->description = $request->description;
+
+    if ($request->hasFile('image')) {
+        $actualite->image = $request->file('image')->store('actualites', 'public');
+    }
+
+    $actualite->save();
+
+    return back()->with('success', 'Actualité ajoutée avec succès !');
+}
+
+// Suppression d'une actualité
+public function deleteActualite($id)
+{
+    $actualite = Actualite::findOrFail($id);
+    $actualite->delete();
+
+    return Inertia::render('Actualite/ActualitePage', [
+        'actualites' => Actualite::all(),
+        'message' => 'Actualité supprimée avec succès !'
+    ]);
+}
+public function actu()
+{
+      // Récupérer les actualités
+      $actualites = Actualite::all();
+ // Retourner la vue avec toutes les données
+ return Inertia::render('Actualités', [
+    'actualites' => $actualites, // Ajout des actualités
+]);
+}
     
 }

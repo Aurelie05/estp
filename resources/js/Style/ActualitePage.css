@@ -1,0 +1,75 @@
+/* Conteneur principal */
+.container {
+    padding: 24px;
+}
+
+/* En-tête avec le bouton */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+/* Titre */
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Bouton d'ajout */
+.btn-add {
+    background-color: #3b82f6;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #2563eb;
+}
+
+/* Liste des actualités */
+.actualite-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Carte d'actualité */
+.actualite-card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+/* Titre de l'actualité */
+.actualite-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Image */
+.actualite-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Description */
+.actualite-description {
+    margin: 8px 0;
+}
+
+/* Actions */
+.actualite-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 12px;
+}
+

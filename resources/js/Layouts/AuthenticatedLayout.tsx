@@ -39,6 +39,7 @@ export default function Authenticated({
               <li onClick={ () => window.open('/events','_self')}>Evenement</li>
               <li onClick={ () => window.open('/information','_self')}>Information</li>
               <li onClick={ () => window.open('/filieres','_self')}>Filiere</li>
+              <li onClick={ () => window.open('/actualites','_self')}>Actualités</li>
               <li onClick={logout} style={{ cursor: 'pointer', color: 'red' }}>Déconnexion</li>
             </ul>
           </nav>
