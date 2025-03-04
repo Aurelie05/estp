@@ -100,7 +100,7 @@ export default function Guest({ children }: PropsWithChildren) {
                         <li onClick={ () => window.open('/presentation','_self')}>Presentation</li>
                         <li onClick={ () => window.open('/ecole','_self')}>Filieres</li>
                         <li onClick={ () => window.open('/partenaire','_self')}>Partenaires</li>
-                        <li onClick={ () => window.open('/actualités','_self')}>Actualités</li>
+                        <li  onClick={ () => window.open('/actualites/page','_self')}>Actualités</li>
                         <li>Offres de stage</li>
                     </ul>
                     
