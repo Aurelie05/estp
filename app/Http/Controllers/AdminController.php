@@ -419,7 +419,7 @@ public function actuaffichage()
     $actualites = Actualite::latest()->get();
 
     // Retourner la vue avec toutes les données
-    return Inertia::render('Actualités', [
+    return Inertia::render('Actualites', [
         'actualites' => $actualites, // Envoi des actualités
     ]);
 }
