@@ -369,7 +369,7 @@ public function actualite()
     $actualites = Actualite::latest()->get();
 
     // Retourner la vue avec les actualités
-    return Inertia::render('Actualités/ActualitePage', [
+    return Inertia::render('PageActualités/ActualitePage', [
         'actualites' => $actualites, // Envoi des actualités à Inertia
     ]);
 }

@@ -134,7 +134,7 @@ Route::post('/actualites', [AdminController::class, 'storeActualite'])->name('ac
 // Route pour supprimer une actualité
 Route::delete('/actualites/{id}', [AdminController::class, 'deleteActualite'])->name('actualites.delete');
 
-Route::get('/actualites', [AdminController::class, 'actuaffichage'])->name('actualites.affichage');
+Route::get('/actualites/page', [AdminController::class, 'actuaffichage'])->name('actualites.affichage');
 
 
 
