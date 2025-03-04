@@ -7,7 +7,7 @@ import image1 from '@/Assets/genie civil.jpg'
 import image2 from '@/Assets/porte ouverte.jpg'
 import image3 from '@/Assets/partenariat.jpg'
 
-interface Actualite {
+interface Actualités {
   id: number;
   titre: string;
   image: string;
@@ -19,8 +19,8 @@ interface Actualite {
 
 
 
-const Actualite = () => {
-  const { actualites = [] } = usePage().props as { actualites?: Actualite[] };
+const Actualités = () => {
+  const { actualites = [] } = usePage().props as { actualites?: Actualités[] };
 
   console.log("Données reçues :", usePage().props);
   
