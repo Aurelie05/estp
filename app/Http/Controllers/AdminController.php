@@ -417,11 +417,17 @@ public function actuaffichage()
 {
     // Récupérer les actualités
     $actualites = Actualite::latest()->get();
+    \Log::info("Données envoyées:", $actualites->toArray());
 
     // Retourner la vue avec toutes les données
-    return Inertia::render('Actualites', [
-        'actualites' => $actualites, // Envoi des actualités
+    // return Inertia::render('Actualites', [
+    //     'actualites' => $actualites, // Envoi des actualités
+    // ]);
+
+    return response()->json([
+        'actualites' => $actualites
     ]);
+    
 }
 
     
