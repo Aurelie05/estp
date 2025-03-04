@@ -420,13 +420,13 @@ public function actuaffichage()
     \Log::info("Données envoyées:", $actualites->toArray());
 
     // Retourner la vue avec toutes les données
-    // return Inertia::render('Actualites', [
-    //     'actualites' => $actualites, // Envoi des actualités
-    // ]);
-
-    return response()->json([
-        'actualites' => $actualites
+    return Inertia::render('Actualites', [
+        'actualites' => $actualites, // Envoi des actualités
     ]);
+
+    // return response()->json([
+    //     'actualites' => $actualites
+    // ]);
     
 }
 
