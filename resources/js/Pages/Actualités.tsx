@@ -21,6 +21,10 @@ interface Actualite {
 
 const Actualite = () => {
   const { actualites = [] } = usePage().props as { actualites?: Actualite[] };
+
+  console.log("Données reçues :", usePage().props);
+  
+
   return (
     <Guest>
       <div className="actualite-container">
