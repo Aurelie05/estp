@@ -407,7 +407,7 @@ public function deleteActualite($id)
     $actualite = Actualite::findOrFail($id);
     $actualite->delete();
 
-    return Inertia::render('Actualite/ActualitePage', [
+    return Inertia::render('PageActualités/ActualitePage', [
         'actualites' => Actualite::all(),
         'message' => 'Actualité supprimée avec succès !'
     ]);

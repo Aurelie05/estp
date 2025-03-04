@@ -125,7 +125,7 @@ Route::get('/actualites', [AdminController::class, 'actualite'])->name('actualit
 
 // Route pour afficher la page de création d'actualités
 Route::get('/actualites/create', function () {
-    return Inertia::render('Actualités/ActualiteForm');
+    return Inertia::render('PageActualités/ActualiteForm');
 })->name('actualites.create');
 
 // Route pour ajouter une actualité
@@ -134,8 +134,7 @@ Route::post('/actualites', [AdminController::class, 'storeActualite'])->name('ac
 // Route pour supprimer une actualité
 Route::delete('/actualites/{id}', [AdminController::class, 'deleteActualite'])->name('actualites.delete');
 
-// Route pour afficher toutes les actualités dans la page actualités
-Route::get('/actualites/all', [AdminController::class, 'actuaffichage'])->name('actualites.affichage');
+Route::get('/actualites', [AdminController::class, 'actuaffichage'])->name('actualites.affichage');
 
 
 
