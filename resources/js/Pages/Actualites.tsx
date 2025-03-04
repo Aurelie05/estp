@@ -20,9 +20,9 @@ interface Actualites {
 
 
 const Actualites = () => {
-  const { actualites = [] } = usePage().props as { actualites?: Actualites[] };
+  const { actualites } = usePage().props as { actualites?: Actualites[] } || { actualites: [] };
 
-  console.log("Données reçues :", usePage().props);
+  console.log("Actualités reçues:", actualites); // 🔍 Ajoute ce log pour voir les données reçues
   
 
   return (
@@ -36,7 +36,7 @@ const Actualites = () => {
 
         {/* Liste des actualités */}
         <div className="actualite-list">
-          {actualites.length > 0 ? (
+        {actualites && actualites.length > 0 ? (
             actualites.map((actu) => (
               <div key={actu.id} className="actualite-card">
                 <img src={`/storage/${actu.image}`} alt={actu.titre} className="actualite-image" />
