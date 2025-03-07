@@ -72,7 +72,11 @@
     font-size: 0.95rem;
     color: #555;
     margin-bottom: 20px;
-  }
+    word-wrap: break-word;  /* Permet de couper les mots longs */
+    overflow-wrap: break-word; /* Assure que les longs mots passent à la ligne */
+    white-space: normal; /* Permet au texte de passer à la ligne */
+}
+
   
   .actualite-button {
     background: #007BFF;
