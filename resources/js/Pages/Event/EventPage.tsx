@@ -36,7 +36,7 @@ export default function EventPage() {
     // Fonction pour gérer la suppression d'un événement
     const deleteEvenement = (id: number) => {
       if (confirm("Voulez-vous vraiment supprimer cet événement ?")) {
-          Inertia.delete(`/evenements/${id}`, {
+          Inertia.delete(`/events/${id}`, {
               onSuccess: () => {
                   console.log("Événement supprimé avec succès !");
               }
