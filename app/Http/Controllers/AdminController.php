@@ -103,12 +103,12 @@ class AdminController extends Controller
        $slider = Slider::find($id);
    
        if (!$slider) {
-           return to_route('SliderPage')->with('error', 'Slider introuvable');
+           return to_route('sliders.index')->with('error', 'Slider introuvable');
        }
    
        $slider->delete();
    
-       return to_route('SliderPage')->with('success', 'Slider supprimé avec succès');
+       return to_route('sliders.index')->with('success', 'Slider supprimé avec succès');
    }
      
 
