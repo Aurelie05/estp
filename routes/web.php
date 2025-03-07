@@ -85,7 +85,7 @@ Route::get('/test-sliders', function () {
     return response()->json(App\Models\Slider::all());
 });
 
-Route::get('/events', [AdminController::class, 'evenement'])->name('events');
+Route::get('/events', [AdminController::class, 'evenement'])->name('events.index');
 Route::post('/events', [AdminController::class, 'storeEvenement'])->name('events.store');
 Route::delete('/events/{id}', [AdminController::class, 'deleteEvenement'])->name('events.delete');
 
@@ -121,7 +121,7 @@ Route::get('/ecole',[AdminController::class, 'ecoles'])->name('ecoles');
 
 
 // Route pour afficher toutes les actualités dans la page actualite
-Route::get('/actualites', [AdminController::class, 'actualite'])->name('actualite');
+Route::get('/actualites', [AdminController::class, 'actualite'])->name('actualite.index');
 
 // Route pour afficher la page de création d'actualités
 Route::get('/actualites/create', function () {

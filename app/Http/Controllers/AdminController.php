@@ -192,12 +192,12 @@ class AdminController extends Controller
          $evenement = Evenement::find($id);
      
          if (!$evenement) {
-             return to_route('evenements.index')->with('error', 'Événement introuvable');
+             return to_route('events.index')->with('error', 'Événement introuvable');
          }
      
          $evenement->delete();
      
-         return to_route('evenements.index')->with('success', 'Événement supprimé avec succès');
+         return to_route('events.index')->with('success', 'Événement supprimé avec succès');
      }
      
      public function presentation()
@@ -404,12 +404,12 @@ public function deleteActualite($id)
     $actualite = Actualite::find($id);
 
     if (!$actualite) {
-        return to_route('actualites.index')->with('error', 'Actualité introuvable');
+        return to_route('actualite.index')->with('error', 'Actualité introuvable');
     }
 
     $actualite->delete();
 
-    return to_route('actualites.index')->with('success', 'Actualité supprimée avec succès');
+    return to_route('actualite.index')->with('success', 'Actualité supprimée avec succès');
 }
 
 // Affichage des actualités pour une autre page (Actualités)
