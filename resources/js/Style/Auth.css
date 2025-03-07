@@ -3,6 +3,7 @@
 .authenticated {
     display: flex;
     height: 100vh;
+    background-color: #f8f9fa;
     /* border: 2px solid green; */
   }
   
