@@ -34,16 +34,14 @@ export default function EventPage() {
     
 
     // Fonction pour gérer la suppression d'un événement
-  const handleDelete = (id: number) => {
-    if (confirm('Êtes-vous sûr de vouloir supprimer cet événement ?')) {
-      // Effectuer la suppression via une requête Inertia
-      Inertia.delete(`/events/${id}`, {
-        onSuccess: () => {
-          // Met à jour l'état local après suppression, en filtrant l'événement supprimé
-          setEvenementsList(evenementsList.filter((event) => event.id !== id));
-        },
-      });
-    }
+    const deleteEvenement = (id: number) => {
+      if (confirm("Voulez-vous vraiment supprimer cet événement ?")) {
+          Inertia.delete(`/evenements/${id}`, {
+              onSuccess: () => {
+                  console.log("Événement supprimé avec succès !");
+              }
+          });
+      }
   };
 
 
@@ -69,7 +67,7 @@ export default function EventPage() {
                             <p className="event-description">{event.description}</p>
 
                             <div className="event-actions">
-                                <button onClick={() => handleDelete(event.id)} className="btn-delete">
+                                <button onClick={() =>deleteEvenement(event.id)} className="btn-delete">
                                     Supprimer
                                 </button>
                             </div>

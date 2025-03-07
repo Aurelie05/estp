@@ -24,15 +24,15 @@ export default function ActualitePage() {
   }, [actualites]);
 
   // Fonction pour supprimer une actualité
-  const handleDelete = (id: number) => {
-    if (confirm('Êtes-vous sûr de vouloir supprimer cette actualité ?')) {
-      Inertia.delete(`/actualites/${id}`, {
-        onSuccess: () => {
-          setActualitesList(actualitesList.filter((actu) => actu.id !== id));
-        },
-      });
+  const deleteActualite = (id: number) => {
+    if (confirm("Voulez-vous vraiment supprimer cette actualité ?")) {
+        Inertia.delete(`/actualites/${id}`, {
+            onSuccess: () => {
+                console.log("Actualité supprimée avec succès !");
+            }
+        });
     }
-  };
+};
 
   return (
     <Authenticated>
@@ -60,7 +60,7 @@ export default function ActualitePage() {
                 <p className="actualite-description">{actu.description}</p>
 
                 <div className="actualite-actions">
-                  <button onClick={() => handleDelete(actu.id)} className="btn-delete">
+                  <button onClick={() => deleteActualite(actu.id)} className="btn-delete">
                     Supprimer
                   </button>
                 </div>

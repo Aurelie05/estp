@@ -187,17 +187,19 @@ class AdminController extends Controller
      }
  
      // Suppression d'un événement
-    public function deleteEvenement($id)
-{
-    $evenement = Evenement::findOrFail($id);
-    $evenement->delete();
-    
-    // Réponse Inertia avec les événements mis à jour
-    return Inertia::render('EventPage', [
-        'evenements' => Evenement::all(),
-        'message' => 'Événement supprimé avec succès !'
-    ]);
-}
+     public function deleteEvenement($id)
+     {
+         $evenement = Evenement::find($id);
+     
+         if (!$evenement) {
+             return to_route('evenements.index')->with('error', 'Événement introuvable');
+         }
+     
+         $evenement->delete();
+     
+         return to_route('evenements.index')->with('success', 'Événement supprimé avec succès');
+     }
+     
      public function presentation()
 {
     // Récupérer les informations à afficher sur la page de présentation
@@ -399,14 +401,17 @@ public function storeActualite(Request $request)
 // Suppression d'une actualité
 public function deleteActualite($id)
 {
-    $actualite = Actualite::findOrFail($id);
+    $actualite = Actualite::find($id);
+
+    if (!$actualite) {
+        return to_route('actualites.index')->with('error', 'Actualité introuvable');
+    }
+
     $actualite->delete();
 
-    return Inertia::render('PageActualités/ActualitePage', [
-        'actualites' => Actualite::all(),
-        'message' => 'Actualité supprimée avec succès !'
-    ]);
+    return to_route('actualites.index')->with('success', 'Actualité supprimée avec succès');
 }
+
 // Affichage des actualités pour une autre page (Actualités)
 public function actuaffichage()
 {

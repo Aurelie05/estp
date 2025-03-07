@@ -35,7 +35,7 @@ export default function Actualites(): JSX.Element {
                   <h2 className="actualite-title">{actu.titre}</h2>
                   <p className="actualite-date">{actu.date}</p>
                   <p className="actualite-description">{actu.description}</p>
-                  <button className="actualite-button">En savoir plus</button>
+                  
                 </div>
               </div>
             ))
