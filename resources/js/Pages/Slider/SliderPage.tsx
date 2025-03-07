@@ -21,17 +21,15 @@ export default function SliderPage() {
 
   
    // Fonction pour gérer la suppression d'un slider
-   const handleDelete = (id: number) => {
-    if (confirm('Êtes-vous sûr de vouloir supprimer ce slider ?')) {
-      Inertia.delete(`/sliders/${id}`, {
-        onSuccess: () => {
-         
-          // Rafraîchir uniquement les données 'slider'
-          Inertia.reload({ only: ['slider'] });
-        },
-      });
+   const deleteSlider = (id: number) => {
+    if (confirm("Voulez-vous vraiment supprimer ce slider ?")) {
+        Inertia.post(`/admin/sliders/${id}/delete`, {}, {
+            onSuccess: () => {
+                console.log("Suppression réussie !");
+            }
+        });
     }
-  };
+};
 
   const[menuOpen, setMenuOpen] = useState(false);
 
@@ -66,7 +64,7 @@ export default function SliderPage() {
                 />
                 <div className="flex justify-between items-center">
                   <button
-                    onClick={() => handleDelete(item.id)} // Appeler la fonction de suppression
+                    onClick={() => deleteSlider(item.id)} // Appeler la fonction de suppression
                     className="text-white bg-red-500 px-4 py-2 rounded hover:bg-red-600"
                   >
                     Supprimer

@@ -103,17 +103,12 @@ class AdminController extends Controller
     $slider = Slider::find($id);
 
     if (!$slider) {
-        return response()->json([
-            'message' => 'Slider non trouvé',
-        ], 404); // Retourne une réponse JSON avec un statut 404
+        return redirect()->back()->with('error', 'Slider introuvable');
     }
 
-    $slider->delete(); // Supprimer le slider
+    $slider->delete();
 
-    // Retourne une réponse JSON pour Inertia
-    return response()->json([
-        'message' => 'Slider supprimé avec succès',
-    ], 200); // Statut 200 pour indiquer que tout s'est bien passé
+    return redirect()->back()->with('success', 'Slider supprimé avec succès');
 }
    
 
