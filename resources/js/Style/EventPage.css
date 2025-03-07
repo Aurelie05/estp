@@ -64,6 +64,10 @@
 /* Description */
 .event-description {
     margin: 8px 0;
+    word-wrap: break-word;  /* Permet de couper les mots longs */
+    overflow-wrap: break-word; /* Assure que les longs mots passent à la ligne */
+    white-space: normal; /* Permet au texte de passer à la ligne */
+
 }
 
 /* Actions */
