@@ -23,13 +23,14 @@ export default function SliderPage() {
    // Fonction pour gérer la suppression d'un slider
    const deleteSlider = (id: number) => {
     if (confirm("Voulez-vous vraiment supprimer ce slider ?")) {
-        Inertia.post(`/admin/sliders/${id}/delete`, {}, {
+        Inertia.delete(`/sliders/${id}`, {
             onSuccess: () => {
                 console.log("Suppression réussie !");
             }
         });
     }
 };
+
 
   const[menuOpen, setMenuOpen] = useState(false);
 

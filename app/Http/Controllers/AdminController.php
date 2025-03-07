@@ -99,18 +99,18 @@ class AdminController extends Controller
 
    // Supprimer un slider
    public function destroy($id)
-{
-    $slider = Slider::find($id);
-
-    if (!$slider) {
-        return redirect()->back()->with('error', 'Slider introuvable');
-    }
-
-    $slider->delete();
-
-    return redirect()->back()->with('success', 'Slider supprimé avec succès');
-}
+   {
+       $slider = Slider::find($id);
    
+       if (!$slider) {
+           return to_route('SliderPage')->with('error', 'Slider introuvable');
+       }
+   
+       $slider->delete();
+   
+       return to_route('SliderPage')->with('success', 'Slider supprimé avec succès');
+   }
+     
 
    
      // Affichage des événements
