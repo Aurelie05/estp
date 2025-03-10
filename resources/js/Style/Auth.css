@@ -56,13 +56,11 @@
     padding: 10px 0;
     font-size: 16px;
     color: #000000;
-    /* border: 2px solid; */
-    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
-    /* transition: background-color 0.2s, color 0.2s; */
-    /* background-color: #999591; */
-    /* color: #333; */
+    
+    
+    
   }
   
   aside ul li:hover {
