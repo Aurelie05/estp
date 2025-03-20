@@ -1,9 +1,11 @@
 import React from 'react';
-import { useForm } from '@inertiajs/react';
+import { useForm, usePage } from '@inertiajs/react';
 import Authenticated from '@/Layouts/AuthenticatedLayout';
 import '@/Style/InformationForm.css';
 
 export default function InformationForm() {
+    const { information } = usePage().props;
+
     const { data, setData, post, processing, errors } = useForm({
         titre: '',
         image: null as File | null,

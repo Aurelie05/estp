@@ -40,17 +40,13 @@ Route::get('/partenaire', function () {
 Route::get('/actualités', function () {
     return Inertia::render('Actualités'); 
 });
+Route::get('/cycletechnicien', function () {
+    return Inertia::render('CycleTechnicienSup'); 
+});
+Route::get('/cycleingenieur', function () {
+    return Inertia::render('CycleIngenieur'); 
+});
 
-// Route::get('/sliders', function (){
-//     return Inertia::render('Slider/SliderPage');
-
-// });
-
-// Route::get('/sliders/create', function (){
-//     return Inertia::render('Slider/SliderForm');
-
-// });
-// Route::post('/sliders', [SliderController::class, 'store']);
 
 // Routes protégées par authentification
 Route::middleware(['auth'])->group(function () {
@@ -73,8 +69,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Autres routes pour l'admin
-// Route::get('/admin/sliders', [AdminController::class, 'sliders'])->name('admin.sliders');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -100,6 +94,7 @@ require __DIR__.'/auth.php';
 Route::get('/', [AdminController::class, 'welcome'])->name('welcome');
 
 Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashevent');
+Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashinfo');
 
 
 Route::get('/presentation', [AdminController::class, 'presentation'])->name('presentation');
@@ -107,6 +102,8 @@ Route::get('/presentation', [AdminController::class, 'presentation'])->name('pre
 Route::get('/information', [AdminController::class, 'createInformation'])->name('information.create');
 
 Route::post('/information', [AdminController::class, 'storeInformation'])->name('information.store');
+Route::get('/information/edit/{id}', [AdminController::class, 'edit'])->name('information.edit');
+Route::put('/information/update/{id}', [AdminController::class, 'updateInformation'])->name('information.update');
 
 
 Route::post('/filieres', [AdminController::class, 'storeFiliere'])->name('filieres.store');

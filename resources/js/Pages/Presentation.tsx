@@ -3,12 +3,17 @@ import { usePage } from '@inertiajs/react';
 import logo from '@/Assets/ESTP.f30db3437790b8dbc7d7.png'
 import Guest from '@/Layouts/GuestLayout';
 import '@/Style/Presentation.css'
+import Footer from "@/Layouts/Footer";
+import { useEffect } from "react"; // Ajout de useEffect pour les animations
 import Slider from "react-slick";
 import image from "@/Assets/SiteSud.8d60a40fc4177a07cebc.jpg"
 import image2 from '@/Assets/INP-HB_files/ESTP.6022a53348fd04e97539.png'
 import slide1 from '@/Assets/SiteSud3.5deff3c7f79f2664d30c.jpg'
 import slide2 from '@/Assets/SiteSud4.287cfcf705cf36fa10d2.jpg'
 import slide3 from '@/Assets/SiteSud6.df1e344005c77a58d5a5.jpg'
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 interface Information {
   id: number;
@@ -28,6 +33,53 @@ export default function Presentation() {
 
   console.log(informations);
 
+  // Liste des points forts
+const pointsForts = [
+  {
+    title: "Excellence académique",
+    description:
+      "Des programmes rigoureux conçus pour répondre aux plus hauts standards internationaux.",
+    icon: "🎓", // Icône (tu peux remplacer par des images)
+  },
+  {
+    title: "Partenariats prestigieux",
+    description:
+      "Des collaborations avec plus de 10 entreprises et 10 universités internationales pour enrichir l'expérience étudiante.",
+    icon: "🤝",
+  },
+  {
+    title: "Dimension internationale",
+    description:
+      "Des opportunités d’échanges académiques, des stages à l’étranger et un environnement multiculturel.",
+    icon: "🌍",
+  },
+  {
+    title: "Insertion professionnelle",
+    description:
+      "Un taux d'insertion de 94% et un réseau d'alumni présent dans les plus grandes entreprises nationales et internationales.",
+    icon: "💼",
+  },
+  {
+    title: "Corps professoral qualifié",
+    description:
+      "Des enseignants-chercheurs et des intervenants professionnels experts dans leur domaine.",
+    icon: "👨‍🏫",
+  },
+  {
+    title: "Infrastructures modernes",
+    description:
+      "Un campus équipé des dernières technologies et des espaces de travail adaptés aux besoins des étudiants.",
+    icon: "🏢",
+  },
+];
+
+useEffect(() => {
+  AOS.init({
+      duration: 1000, // Durée de l'animation
+      once: false, // Permet de rejouer l'animation à chaque passage
+  });
+}, []); 
+
   return (
     <Guest>
     <div className="presentation-container">
@@ -42,8 +94,8 @@ export default function Presentation() {
             className="background-image"
             />
             <div className="overlay"></div>
-      </div>
-      <div className="presentation-section">
+      </div><div data-aos="fade-down"></div>
+        <div className="presentation-section" data-aos="flip-up" data-aos-once="false">
             {informations && informations.length > 0 ? (
                 informations.map((information) => (
                     <div key={information.id} className="director-container">
@@ -66,12 +118,49 @@ export default function Presentation() {
                 <p>Aucune information disponible.</p>  // Message si le tableau est vide
             )}
         </div>
+        <div className="section1">
+          <h2>A propos</h2>
+          <p className="text-section">Crée en 1963, l’École Nationale Supérieure des travaux
+            Publics (ENSTP) initialement à Abidjan a été transférée
+            à Yamoussoukro en 1979. À la faveur de la restructuration
+            des grandes écoles de Yamoussoukro en 1996, l’INP-HB
+            a été créé. Il regroupe huit (08) grandes écoles dont
+            l’École Supérieure des Travaux Publics (ESTP).
+            Transfuge de l’ex-ENSTP, l’ESTP est chargée d’assurer
+            la formation initiale dans le domaine du Génie Civil.
+            L’ESTP a pour mission :
+            <ul>
+              <li>la Formation initiale de Techniciens Supérieurs et d’Ingénieurs
+                    dans les domaines du Génie Civil et de toutes spécialités
+                    connexes
+              </li>
+              <li>la Production</li>
+              <li>la Prestation et expertise pour les entreprises et les
+              collectivités locales.</li>
+            </ul>
+          </p>
+        </div>
+
+        <section className="points-forts-section">
+          <h2>Nos points forts</h2>
+          <div className="points-forts-container" data-aos="zoom-out-down" data-aos-once="false">
+            {pointsForts.map((point, index) => (
+              <div key={index} className="point-card">
+                <div className="icon">{point.icon}</div>
+                <h3>{point.title}</h3>
+                <p>{point.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        
 
     
 
 
 
-    <footer className="footer-container">
+    {/* <footer className="footer-container">
       <div className="footer-section">
         <h3>ECOLE SUPERIEURE DES TRAVAUX PUBLICS</h3>
         <ul>
@@ -102,8 +191,8 @@ export default function Presentation() {
       <div className="footer-bottom">
         <p>By INP-HB Digital Copyright © 2025</p>
       </div>
-    </footer>
-    {/* <Footer></Footer> */}
+    </footer> */}
+    <Footer></Footer>
     </div>
     </Guest>
   );

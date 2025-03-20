@@ -9,7 +9,7 @@
 }
 .imageslider{
     width: 100%;
-    height: 500px;
+    height: 550px;
     /* min-height: 500px; */
     align-items: center;
     justify-content: center;
@@ -38,6 +38,154 @@
     display: block;
     /* background-color: brown; */
 }
+.slider-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 1s ease-in-out; /* Animation de transition fluide */
+}
+
+/* Overlay noir semi-transparent */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+body{
+    background-color: #e6e6e6;
+}
+.slick-prev, .slick-next {
+    z-index: 100 !important;
+}
+
+/* Texte fixe */
+.slider-text {
+    /* border: 1px solid red; */
+    z-index: 100 !important;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+}
+
+.slider-text h2 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.slider-text p {
+    font-size: 1.0rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 30px;
+}
+
+/* Effet d'animation au changement d’image */
+.slick-slide {
+    transition: transform 1s ease-in-out;
+}
+
+.slick-active .slider-image {
+    transform: scale(1.05);
+}
+
+/* Boutons */
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: #81257d;
+    color: white;
+    border-radius: 5px;
+}
+.btn-primary:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+
+.btn-outline-light {
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+    border-radius: 5px;
+}
+.cards-container {
+    /* display: flex; */
+    position: absolute;
+    top: 600px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  
+  .card {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+  }
+  
+  .icon {
+    font-size: 40px;
+    background-color: #a00498;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .button {
+    padding: 8px 15px;
+    border: 2px solid #a00498;
+    color: #a00498;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .button:hover {
+    background: #a00498;
+    color: white;
+  }
+  
 .text-box {
 
     width: 80%;
@@ -212,7 +360,7 @@
 /* Container principal */
 .events-container {
     position: absolute;
-    top: 900px;
+    top: 1000px;
     width: 100%;
     /* height: 700px; */
     text-align: center;
@@ -241,7 +389,7 @@
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    width: 300px;
+    width: 400px;
     transition: transform 0.3s ease;
   }
   
@@ -316,7 +464,7 @@
     display: inline-block;
     width: 5px;
     height: 27px;
-    background-color: #000;
+    background-color: #a00498;
     margin-right: 10px;
   }
   
@@ -346,7 +494,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 1500px;
+    top: 700px;
     gap: 20px;
     padding: 20px;
     margin: 0 auto;
@@ -415,7 +563,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 1800px;
+    top: 1000px;
     gap: 20px;
     padding: 20px;
     margin: 0 auto;
@@ -585,70 +733,51 @@
         object-fit: cover;
         /* border: 3px solid ; */
     }
-    .text-box{
-        width: 70%;
-        /* margin: 0 auto; */
-        height: 350px;
-        position: absolute;
-        bottom: -60px; 
-        left: 50%;
-        color: #000;
-        transform: translateX(-50%);
-        /* font-size: 15px; */
-        /* border: 6px solid black; */
+    .slider-text h2{
+        font-size: 45px;
     }
-    .text-box h1{
-        font-size: 19px;
+    .slider-text p {
+        font-size: 10px;
     }
-    .text-box .line2{
-        /* font-size: 10px; */
-        height: 19px;
+    .btn{
+        font-size: 12px;
+
     }
-    .text-box1 {
-        font-size: 14px; /* Ajuste si nécessaire */
+    .cards-container{
         width: 100%;
-        /* height: 250px; */
-        color: #000;
-        overflow: hidden; /* Cache le texte qui dépasse */
-        display: -webkit-box;
-        -webkit-line-clamp: 10; 
-        -webkit-box-orient: vertical;
+        position: absolute;
+        top: 400px;
+        grid-template-columns: repeat(1, 1fr); /* 2 cartes par ligne */
+        flex-direction: column; /* Change en colonne */
+        align-items: center; /* Centre les cartes */
     }
-    .text-box2 {
-        color: #000;
-        display: none;
-        font-size: 10px;
-        overflow: hidden; /* Ajouté pour cacher le texte qui dépasse */
-        text-overflow: ellipsis; /* Ajouté pour afficher des points de suspension */
-        white-space: nowrap; /* Ajouté pour empêcher le texte de passer à la ligne */
+    .card{
+        height: 200px;
+        margin: 0 auto;
+        width: 90%; /* Largeur presque complète */
+        max-width: 350px; /* Évite que ça soit trop large */
     }
-    .text-box3 {
-        display: none;
-        color: #000;
-        font-size: 10px;
-        overflow: hidden;  
-        text-overflow: ellipsis;  
-        /* white-space: nowrap;  */
-    }
+    
     .events-container{
         width: 100%;
         position: absolute;
-        top: 800px;
+        top: 1300px;
         /* border: 1px solid; */
 
     }
     .events-title{
         /* top: 30px; */
         /* position: absolute; */
-        font-size: 19px;
+        font-size: 20px;
     }
     .events-title span{
         /* font-size: 10px; */
         height: 19px;
     }
     .events-cards{
-        width: 250px;
+        width: 90%;
         margin: 0 auto;
+        /* border: 2px solid red; */
         /* position: absolute; */
         /* top: 30px; */
 
@@ -764,12 +893,43 @@
  }
  
 /* Tablettes et mobiles en paysage */
-@media screen and (min-width: 577px) and (max-width: 768px) {
+@media screen and (min-width: 567px) and (max-width: 768px) {
     /* Styles pour les tablettes */
     .imageslider{
-        width: 100%;
-        height: 400px;
+        max-width: 100%;
+        height: 100%;
+        display: block;
+        /* overflow: hidden; */
+        position: relative;
+        /* outline: 2px dashed blue; */
+        object-fit: cover;
+        /* margin-bottom: 40px; */
         /* border: 2px solid; */
+    }
+    .slider-text h2{
+        /* color: red; */
+        font-size: 45px;
+    }
+    .slider-text p {
+        font-size: 14px;
+    }
+    .btn{
+        font-size: 15px;
+
+    }
+    .cards-container{
+        width: 100%;
+        position: absolute;
+        top: 500px;
+        grid-template-columns: repeat(1, 1fr); 
+        flex-direction: column; /* Change en colonne */
+        align-items: center; /* Centre les cartes */
+    }
+    .card{
+        height: 200px;
+        margin: 0 auto;
+        width: 90%; /* Largeur presque complète */
+        max-width: 350px; /* Évite que ça soit trop large */
     }
     .text-box{
         /* background-color: #000000; */
@@ -787,6 +947,12 @@
         font-size: 16px;
     }
     .events-container{
+        top: 1400px;
+
+    }
+    .events-cards{
+        width: 90%;
+        margin: 0 auto;
 
     }
     .events-title{
@@ -830,6 +996,49 @@
 /* Petits ordinateurs portables */
 @media screen and (min-width: 769px) and (max-width: 992px) {
     /* Styles pour les petits laptops */
+    .imageslider{
+        max-width: 100%;
+        height: 100%;
+        display: block;
+        /* overflow: hidden; */
+        position: relative;
+        /* outline: 2px dashed blue; */
+        object-fit: cover;
+        /* margin-bottom: 40px; */
+        /* border: 2px solid; */
+    }
+    .slider-text h2{
+        font-size: 45px;
+        /* color: #a00498; */
+    }
+    .slider-text p {
+        font-size: 14px;
+    }
+    .btn{
+        font-size: 15px;
+
+    }
+    .cards-container{
+        width: 90%;
+        position: absolute;
+        top: 550px;
+        display: grid;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne */
+        gap: 20px;
+    }
+    .card{
+        height: 200px;
+        justify-self: center; 
+        width: 90%; /* Largeur presque complète */
+        max-width: 350px; /* Évite que ça soit trop large */
+    }
+    .card:nth-child(3) { 
+        grid-column: span 2; /* La 3e carte prend 2 colonnes pour être centrée */
+        justify-self: center; /* Centre la carte */
+      }
     .text-box h1{
         font-size: 20px;
         /* background-color: #000; */
@@ -847,8 +1056,11 @@
     width: 40%;
     /* border: 2px solid; */
 }
+.events-container{
+    top: 1200px;
+}
 .events-title{
-    font-size: 20px;
+    font-size: 30px;
 }
 .line2{
     font-size: 20px;
@@ -881,6 +1093,33 @@
 /* Ordinateurs portables standard */
 @media screen and (min-width: 993px) and (max-width: 1200px) {
     /* Styles pour les laptops */
+    .slider-text h2{
+        /* font-size: 35px; */
+        /* color: #0448a0; */
+    }
+    
+    
+    .cards-container{
+        width: 90%;
+        position: absolute;
+        top: 550px;
+        display: grid;
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne */
+        gap: 20px;
+    }
+    .card{
+        height: 200px;
+        justify-self: center; 
+        width: 90%; /* Largeur presque complète */
+        max-width: 350px; /* Évite que ça soit trop large */
+    }
+    .card:nth-child(3) { 
+        grid-column: span 2; /* La 3e carte prend 2 colonnes pour être centrée */
+        justify-self: center; /* Centre la carte */
+      }
     .text-box h1{
         font-size: 25px;
         /* background-color: red; */
@@ -898,6 +1137,13 @@
     width: 40%;
     /* border: 2px solid; */
 }
+.events-container{
+    /* grid-template-columns: repeat(2, 1fr);  */
+    top: 1200px;
+    
+    /* font-size: 25px; */
+}
+
 .events-title{
     font-size: 25px;
 }
@@ -932,6 +1178,23 @@
 /* Grands écrans de bureau */
 @media screen and (min-width: 1201px) and (max-width: 1440px) {
     /* Styles pour les grands écrans */
+    .cards-container{
+        width: 90%;
+        position: absolute;
+        /* top: 550px; */
+        /* display: grid; */
+        padding: 10px;
+        text-align: center;
+        margin: 0 auto;
+        
+        /* gap: 20px; */
+    }
+    .card{
+        height: 200px;
+        justify-self: center; 
+        width: 90%; /* Largeur presque complète */
+        max-width: 350px; /* Évite que ça soit trop large */
+    }
     .text-box{
         /* width: 100%; */
         height: 300px;
@@ -985,6 +1248,38 @@
         display: block;
         /* background-color: brown; */
     }
+    .slider-text{
+        top: 300px;
+    }
+    .slider-text h2{
+        /* font-size: 35px; */
+        /* color: #a00498; */
+    }
+    .slider-text p {
+        /* font-size: 14px; */
+    }
+    .btn{
+        /* font-size: 15px; */
+
+    }
+    .cards-container{
+        /* width: 90%; */
+        position: absolute;
+        top: 750px;
+        /* border: 3px solid; */
+        /* display: grid; */
+        /* padding: 10px; */
+        /* text-align: center; */
+        /* margin: 0 auto; */
+        
+        /* gap: 20px; */
+    }
+    .card{
+        height: 200px;
+        justify-self: center; 
+        width: 90%; /* Largeur presque complète */
+        max-width: 350px; /* Évite que ça soit trop large */
+    }
     .text-box{
         /* width: 100%; */
         height: 300px;
@@ -1007,11 +1302,11 @@
 }
 
 .events-container{
-    top: 1100px;
+    top: 1200px;
 }
 
-.event-card{
-    width: 350px;
+.event-cards{
+    width: 90%;
 }
 
 .box5{

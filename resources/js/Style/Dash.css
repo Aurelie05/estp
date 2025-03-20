@@ -80,7 +80,7 @@ body{
   position: fixed;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: auto;
   width: 250px;
   background-color: #333;
   color: white;
@@ -117,7 +117,64 @@ body{
   cursor: pointer;
   font-size: 24px;
 }
+.events-summary2 {
+  background-color: #e2e3e5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
 
+.event-card2 {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.director-image img {
+  width: 80px; /* Ajuste la taille selon ton besoin */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.event-card2 h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.event-card2 p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.btn-modifier {
+  background-color: #28a745; /* Vert */
+  color: white; /* Texte en blanc */
+  padding: 12px 24px; /* Padding pour l'agrandir */
+  border-radius: 8px; /* Coins arrondis */
+  font-size: 16px; /* Taille de la police */
+  font-weight: bold; /* Police en gras */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Curseur en forme de main */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de relief */
+  transition: background-color 0.3s, transform 0.3s; /* Transition douce */
+}
+
+.btn-modifier:hover {
+  background-color: #218838; /* Changement de couleur au survol */
+  transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+.btn-modifier:focus {
+  outline: none; /* Retirer l'outline par défaut */
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.4); /* Ombre au focus */
+}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .search-bar{

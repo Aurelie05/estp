@@ -1,10 +1,12 @@
 import React from "react";
+import Footer from "@/Layouts/Footer";
 import '@/Style/Partenaires.css';
 import Guest from "@/Layouts/GuestLayout";
 import "slick-carousel/slick/slick.css";
 import logo from '@/Assets/ESTP.f30db3437790b8dbc7d7.png'
 import "slick-carousel/slick/slick-theme.css";
 import Pa from "@/Assets/INP-HB_files/PA (2).592d777f90d86ce57947.png"
+import college from '@/Assets/logo-college-montmorency.png'
 import Slider from "react-slick";
 import image from "@/Assets/SiteSud4.287cfcf705cf36fa10d2.jpg"
 import slide2 from "@/Assets/INP-HB_files/PE (2).0bbba88c4d6cae1d2614.png"
@@ -18,7 +20,7 @@ import slide5 from "@/Assets/INP-HB_files/PE (8).cc92af4dbb97457ae5ce.png"
 const partenairesAcademiques = [
   { id: 1,  logo: Pa },
   { id: 2,  logo: Pa },
-  { id: 3,  logo: Pa },
+  { id: 3,  logo: college },
 ];
 
 const partenairesEntreprises = [
@@ -63,9 +65,13 @@ const Partenaire = () => {
             className="background-image"
             />
             <div className="overlay"></div>
+            <div className="slider-text">
+                <h2>Nos Partenaires</h2>
+                      
+            </div>
       </div>
      <div className="partenaire-container">
-      <h1 className="partenaire-title">Nos Partenaires</h1>
+      {/* <h1 className="partenaire-title">Nos Partenaires</h1> */}
 
       {/* Section Partenaires Académiques */}
       <section className="partenaire-section">
@@ -107,7 +113,7 @@ const Partenaire = () => {
       
     </div>
 
-    <footer className="footer-container">
+    {/* <footer className="footer-container">
       <div className="footer-section">
         <h3>ECOLE SUPERIEURE DES TRAVAUX PUBLICS</h3>
         <ul>
@@ -138,7 +144,8 @@ const Partenaire = () => {
       <div className="footer-bottom">
         <p>By INP-HB Digital Copyright © 2025</p>
       </div>
-    </footer>
+    </footer> */}
+    <Footer></Footer>
     </Guest>
   );
 };

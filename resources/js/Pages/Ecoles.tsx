@@ -1,11 +1,14 @@
 import Guest from '@/Layouts/GuestLayout';
-// import Footer from '@/Layouts/Footer';
+import Footer from '@/Layouts/Footer';
 import { FaCircleArrowDown } from "react-icons/fa6";
 import logo from '@/Assets/ESTP.f30db3437790b8dbc7d7.png'
 import React from 'react';
 import image from "@/Assets/SiteSud.8d60a40fc4177a07cebc.jpg"
 import '@/Style/Ecoles.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { usePage } from '@inertiajs/react';
+import { useEffect } from "react"; // Ajout de useEffect pour les animations
 
 const Ecoles = () => {
   const { filieres } = usePage().props as unknown as { filieres: { id: number, cycle: string, nom_filiere: string, debouchés: string }[] };
@@ -15,7 +18,13 @@ const Ecoles = () => {
   const filieresTechnicien = filieres.filter(filiere => filiere.cycle === 'Cycle Technicien Supérieur');
 
  
- 
+  useEffect(() => {
+    AOS.init({
+        duration: 1000, // Durée de l'animation
+        once: false, // Permet de rejouer l'animation à chaque passage
+    });
+}, []);  
+
 
   return (
     <Guest>
@@ -26,12 +35,16 @@ const Ecoles = () => {
             className="background-image"
             />
             <div className="overlay"></div>
+            <div className="slider-text">
+                <h2>Nos Formations</h2>
+                      
+            </div>
       </div>
       <div className="page-formation-alt">
-                <h1>Cycle Technicien Supérieur <FaCircleArrowDown /></h1>
+                <h1>Cycle Technicien Supérieur<FaCircleArrowDown /></h1>
                 <div className="schools-list">
                     {filieresTechnicien.map((filiere, index) => (
-                        <div key={index} className="school-block" style={{ borderLeft: `10px solid #6200EA` }}>
+                        <div key={index} className="school-block" style={{ borderLeft: `10px solid #6a0dad` }}>
                             <div className="school-info">
                                 <h4>{filiere.nom_filiere}</h4>
                                 <p>{filiere.debouchés}</p>
@@ -46,7 +59,7 @@ const Ecoles = () => {
           <h1>Cycle Ingénieur<FaCircleArrowDown /></h1>
           <div className="schools-list">
                     {filieresIngenieur.map((filiere, index) => (
-                        <div key={index} className="school-block" style={{ borderLeft: `10px solid #6200EA` }}>
+                        <div key={index} className="school-block" style={{ borderLeft: `10px solid #6a0dad` }}>
                             <div className="school-info">
                                 <h4>{filiere.nom_filiere}</h4>
                                 <p>{filiere.debouchés}</p>
@@ -73,7 +86,7 @@ const Ecoles = () => {
 
 
 
-        <footer className="footer-container">
+      {/* <footer className="footer-container">
       <div className="footer-section">
         <h3>ECOLE SUPERIEURE DES TRAVAUX PUBLICS</h3>
         <ul>
@@ -104,8 +117,8 @@ const Ecoles = () => {
       <div className="footer-bottom">
         <p>By INP-HB Digital Copyright © 2025</p>
       </div>
-    </footer>            
-      {/* <Footer></Footer> */}
+      </footer>             */}
+      <Footer></Footer>
     </Guest>
   );
 };

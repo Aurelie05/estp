@@ -37,6 +37,21 @@
   background: rgba(0, 0, 0, 0.5); 
 }
 
+.slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+}
+
+.slider-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
 /* PageFormation.css */
 
 .page-formation-alt {
@@ -58,7 +73,7 @@
     display: flex;
     font-family: "Poppins", serif;
     font-weight: 800;
-    color: #2b6f8f;
+    color: #a00498;
     gap: 10px;
     padding: 20px;
   }
@@ -154,7 +169,7 @@
     display: flex;
     font-family: "Poppins", serif;
     font-weight: 800;
-    color: #2b6f8f;
+    color: #a00498;
     gap: 10px;
     padding: 20px;
   }
@@ -188,7 +203,7 @@
     font-family: "Poppins", serif;
     /* display: flex; */
     font-weight: 800;
-    color: #2b6f8f;
+    color: #a00498;
     gap: 10px;
     padding: 20px;
 }
@@ -196,14 +211,14 @@
 .table-container {
     display: flex;
     flex-direction: column;
-    border: 4px solid #2b6f8f; /* Bordure générale */
+    border: 4px solid #a00498; /* Bordure générale */
     border-radius: 10px;
     overflow: hidden;
   }
   
   .table-row {
     display: flex;
-    border-bottom: 2px solid #2b6f8f; /* Séparation des lignes */
+    border-bottom: 2px solid #a00498; /* Séparation des lignes */
   }
   
   .table-row:last-child {
@@ -211,7 +226,7 @@
   }
   
   .table-title {
-    background-color: #2b6f8f;
+    background-color: #a00498;
     color: white;
     font-weight: bold;
     padding: 16px;
@@ -304,7 +319,7 @@
   
   .newsletter-button {
     padding: 8px 12px;
-    background-color: #6a0dad;
+    background-color: #a00498;
     color: white;
     border: none;
     border-radius: 5px;
@@ -312,7 +327,7 @@
   }
   
   .newsletter-button:hover {
-    background-color: #580b9e;
+    background-color: #a00498;
   }
   
   /* Footer bottom (centré en bas) */

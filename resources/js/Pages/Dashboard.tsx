@@ -7,10 +7,14 @@ import logo from '@/Assets/ESTP.f30db3437790b8dbc7d7.png';
 import { usePage } from '@inertiajs/react';
 import { IoPersonCircleSharp } from "react-icons/io5";
 import '@/Style/Dash.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 interface DashboardProps {
   userName: string;
   evenements: Evenement[];
+  informations: Information[]; // Ajout de informations
 }
 
 interface Evenement {
@@ -19,17 +23,36 @@ interface Evenement {
   date: string;
   lieu: string;
 }
+interface Information {
+    id: number;
+    titre: string;
+    image: string;
+    nom_image?: string;
+    description: string;
+}
+  interface PageProps {
+    auth: any;
+    informations: Information[];  // Tableau d'objets Information
+    [key: string]: any;
+  }
 export default function Dashboard() {
-  // const { evenements = [] } = usePage().props as { evenements?: Evenement[] };
-  // const { user } = usePage().props as unknown as { user: { name: string } }; 
-  const { userName, evenements } = usePage().props as unknown as DashboardProps;
+    
+  const { userName, evenements,informations = [] } = usePage().props as unknown as DashboardProps;
   // console.log(user);
   const[menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
       setMenuOpen(!menuOpen);
   };
+  useEffect(() => {
+    AOS.init({
+        duration: 1000, // Durée de l'animation
+        once: false, // Permet de rejouer l'animation à chaque passage
+    });
+}, []);  
+
     return (
+
         <AuthenticatedLayout>
             <main className="dashboard">
                 <div className="top-bar flex justify-between items-center p-4 bg-white shadow-lg">
@@ -51,24 +74,6 @@ export default function Dashboard() {
                       </div>
                 </div>
 
-                {/* <div className="stats-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
-                    <div className="stats-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-                        <h3 className="text-3xl font-semibold">155+</h3>
-                        <p className="text-sm text-gray-600">Completed Courses</p>
-                    </div>
-                    <div className="stats-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-                        <h3 className="text-3xl font-semibold">39+</h3>
-                        <p className="text-sm text-gray-600">Earned Certificates</p>
-                    </div>
-                    <div className="stats-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-                        <h3 className="text-3xl font-semibold">25+</h3>
-                        <p className="text-sm text-gray-600">Courses in Progress</p>
-                    </div>
-                    <div className="stats-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
-                        <h3 className="text-3xl font-semibold">18k+</h3>
-                        <p className="text-sm text-gray-600">Community Support</p>
-                    </div>
-                </div> */}
 
                 {/* Section de récapitulatif des événements */}
                 <div className="events-summary bg-gray-200 p-6 rounded-lg shadow-lg mt-8 m-8">
@@ -90,7 +95,7 @@ export default function Dashboard() {
 
                 {menuOpen && (
                 <>  
-                <div className='aside'>
+                <div className='aside' data-aos="zoom-out-right" data-aos-once="false">
                   
                   <nav>
                     <ul>
@@ -99,33 +104,42 @@ export default function Dashboard() {
                       <li onClick={ () => window.open('/events','_self')}>Evenement</li>
                       <li onClick={ () => window.open('/information','_self')}>Information</li>
                       <li onClick={ () => window.open('/filieres','_self')}>Filiere</li>
-                      
+                      <li onClick={ () => window.open('/actualites','_self')}>Actualités</li>
                     </ul>
                   </nav>
                 </div>
                 </>
 
                 )}
+                <div className="events-summary2 bg-gray-200 p-6 rounded-lg shadow-lg mt-8 m-8">
+                    <h2 className="text-xl font-semibold text-gray-800 mb-4">Informations récentes</h2>
 
-                {/* Section des filières récentes */}
-                {/* <div className="filieres-summary bg-gray-200 p-6 rounded-lg shadow-lg mt-8 m-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-4">Filières disponibles</h2>
-                    <ul className="filieres-list space-y-2">
-                        
-                        <li className="filiere-card p-4 border-b border-gray-200">
-                            <h3 className="text-lg font-medium">Informatique</h3>
-                            <p className="text-sm text-gray-600">Débouchés: Développeur, Analyste</p>
-                        </li>
-                        <li className="filiere-card p-4 border-b border-gray-200">
-                            <h3 className="text-lg font-medium">Génie Civil</h3>
-                            <p className="text-sm text-gray-600">Débouchés: Architecte, Ingénieur</p>
-                        </li>
-                        <li className="filiere-card p-4 border-b border-gray-200">
-                            <h3 className="text-lg font-medium">Marketing</h3>
-                            <p className="text-sm text-gray-600">Débouchés: Responsable Marketing</p>
-                        </li>
-                    </ul>
-                </div> */}
+                    <div className="events-list2">
+                        {Array.isArray(informations) && informations.length > 0 ? (
+                            informations.map((information) => (
+                                <div key={information.id} className="event-card2 p-4 border-b border-gray-200">
+                                    <div className="director-image">
+                                        <img src={`/storage/${information.image}`} alt={information.nom_image ?? 'Information'} />
+                                    </div>
+                                    <h3 className="text-lg font-medium">{information.titre ?? 'Titre indisponible'}</h3>
+                                    <p className="text-sm text-gray-600">{information.description ?? 'Aucune description disponible.'}</p>
+                                    {/* Bouton Modifier */}
+                                    <button 
+                                        onClick={() => window.open(`/information/edit/${information.id}`, '_self')}
+                                        className="btn-modifier"
+                                    >   
+                                     Modifier
+                                    </button>
+
+                                </div>
+                            ))
+                        ) : (
+                            <p className="text-gray-500">Aucune information disponible.</p>
+                        )}
+                    </div>
+                </div>
+
+
             </main>
         </AuthenticatedLayout>
     );

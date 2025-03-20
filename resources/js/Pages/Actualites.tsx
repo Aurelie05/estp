@@ -1,5 +1,6 @@
 import React from "react";
 import { usePage } from "@inertiajs/react";
+import Footer from "@/Layouts/Footer";
 import "@/Style/Actualités.css";
 import Guest from "@/Layouts/GuestLayout";
 import logo from '@/Assets/ESTP.f30db3437790b8dbc7d7.png';
@@ -45,7 +46,7 @@ export default function Actualites(): JSX.Element {
         </div>
       </div>
 
-      <footer className="footer-container">
+      {/* <footer className="footer-container">
         <div className="footer-section">
           <h3>ECOLE SUPERIEURE DES TRAVAUX PUBLICS</h3>
           <ul>
@@ -76,7 +77,8 @@ export default function Actualites(): JSX.Element {
         <div className="footer-bottom">
           <p>By INP-HB Digital Copyright © 2025</p>
         </div>
-      </footer>
+      </footer> */}
+      <Footer></Footer>
     </Guest>
   );
 }

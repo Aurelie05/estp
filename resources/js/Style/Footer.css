@@ -1,6 +1,129 @@
 .footer-container {
+  background-color: #25292e;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid white; */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left,
+.footer-links,
+.footer-contact {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* display: flex; */
+  flex: 1;
+  /* border: 1px solid red; */
+  min-width: 250px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-left h3,
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 25px;
+  font-family: Montserrat;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.no-underline {
+  color: #ffffff;
+  text-decoration: none; /* Enlève le trait en bas des liens */
+}
+.footer-left p {
+  font-family: Montserrat;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.social-icons svg {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.social-icons svg:hover {
+  color: #1da1f2; /* Bleu Twitter */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li  {
+  color: #7509bd;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-links ul li a {
+  color: #7509bd;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: white;
+}
+
+.footer-contact p {
+  font-family: Montserrat;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom-links {
+  margin-top: 10px;
+}
+
+.footer-bottom-links a {
+  color: #17a2b8;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.footer-bottom-links a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-container {
     position: absolute;
-    top: 3300px;
+    top: 1600px;
     display: flex;
     flex-direction: row; 
     justify-content: space-between; /* Sépare le contenu principal du bas */
@@ -76,7 +199,7 @@
   
   .newsletter-button {
     padding: 8px 12px;
-    background-color: #aea4e7;
+    background-color: #a00498;
     color: white;
     border: none;
     border-radius: 5px;
@@ -84,7 +207,7 @@
   }
   
   .newsletter-button:hover {
-    background-color: #aea4e7;
+    background-color: #a00498;
   }
   
   /* Footer bottom (centré en bas) */
@@ -100,13 +223,13 @@
     width: 100%; /* S'étend sur toute la largeur */
   }
   
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     .footer-container{
       width: 100vw;
       height: 600px;
       position: absolute;
       flex-direction: column;
-      top: 3600px;
+      top: 3000px;
     }
     .footer-center{
       display: none;
@@ -118,7 +241,7 @@
     h3{
       font-size: 15px;
  
-      color: #6a0dad;
+      color: #880ae2;
     }
     .footer-bottom{
       /* margin-top: 50px; */
@@ -127,11 +250,30 @@
     }
      
   }
-  @media screen and (min-width: 1441px) {
+  @media screen and (min-width: 769px) and  (max-width: 992px) {
+      .footer-container{
+        position: absolute;
+        top: 2000px;
+      }
+    }
+  @media screen and (min-width: 993px) and  (max-width: 1200px) {
     .footer-container{
-      top: 4300px;
+      position: absolute;
+      top: 2000px;
     }
-    body{
-      /* font-size: 35px; */
-    }
+    
 }	
+@media screen and (min-width: 1201px) and  (max-width: 1440px) {
+  .footer-container{
+    position: absolute;
+    top: 1700px;
+  }
+  
+}
+@media screen and (min-width: 1441px) {
+  .footer-container{
+    position: absolute;
+    top: 2000px;
+  }
+  
+}

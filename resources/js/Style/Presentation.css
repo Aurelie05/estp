@@ -36,7 +36,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(45, 111, 137, 0.5); 
+    background: rgba(0, 0, 0, 0.5); 
   }
  /* Conteneur principal */
 .presentation-section {
@@ -62,18 +62,12 @@
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Ombre douce */
     padding: 30px;
-    opacity: 0; /* Initialement invisible */
-    transform: translateY(100px); /* Hors de l'écran */
-    animation: slideUp 0.8s ease-out forwards; /* Animation */
+    
+    
+    
   }
   
-  /* Animation keyframes */
-  @keyframes slideUp {
-    to {
-      opacity: 1;
-      transform: translateY(0); 
-    }
-  }
+  
   
   /* Image et nom */
   .director-image {
@@ -109,32 +103,119 @@
   .director-title {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #a00498;
     margin-bottom: 10px;
   }
   
   .director-text {
-    /* border: 4px solid; */
-    height: 150px; /* Garde une hauteur fixe */
-    font-size: 16px;
+    /* border: 1px solid red; */
+    width: 100%;
+    font-size: 18px;
     color: #555;
-    width: 100%; /* Largeur limitée */
-    line-height: 1.6;
+    font-family: Montserrat;
+    height: 160px; /* Fixe la hauteur */
+    line-height: 1.5; /* Espacement entre les lignes */
     overflow: hidden; /* Cache le texte qui dépasse */
-    text-align: justify; /* Justifie le texte */
-    white-space: normal; /* Permet le retour automatique à la ligne */
-    word-wrap: break-word; /* S'assure que les mots longs ne débordent pas */
-    overflow-wrap: break-word; /* Alternative moderne à word-wrap */
-}
-  
-  /* .text2{
-    position: absolute;
-    top: 500px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #000000;
     
-  } */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6; /* Affiche 5 lignes maximum */
+    
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.section1{
+  position: absolute;
+  top: 700px;
+  width: 80%;
+  
+  height: auto;
+  /* border: 1px solid; */
+}
+.section1 h2{
+  text-align: center;
+  /* border: 1px solid; */
+  padding: 10px ;
+  color: #a00498;
+}
+.text-section {
+  color: #000;
+  font-size: 18px;
+  /* padding: 10px; */
+  font-family: Montserrat;
+  padding: 10px;
+  /* border: 1px solid; */
+}
+
+
+.points-forts-section {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  /* border: 1px solid; */
+  top: 1000px;
+  padding: 40px 20px;
+  /* background-color: #f8f9fa; */
+}
+.points-forts-section h2{
+  color: #a00498;
+  text-align: center;
+  font-family: Montserrat;
+}
+
+.points-forts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.point-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.point-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  font-size: 17px;
+  justify-content: center;
+  align-items: center; /* Ajouté pour centrer l'icône */
+  display: flex;
+  text-align: center;
+  border-radius: 50px 50px;
+  margin: 0 auto;
+  font-size: 40px;
+  background-color: #a00498;
+  /* color: #0056b3; */
+  /* border: 1px solid; */
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+}
+
+
   .line2 {
     display: inline-block;
     width: 5px;
@@ -163,7 +244,7 @@
     padding: 100px;
     font-weight: bold;
     padding: 10px 20px;
-    border-bottom: 2px solid #464da9; /* Ligne verte sous le titre */
+    border-bottom: 2px solid #a00498; /* Ligne verte sous le titre */
     margin-bottom: 10px;
     color: rgb(0, 0, 0);
   }
@@ -202,107 +283,6 @@
   }
   
 
-
-  .footer-container {
-    position: absolute;
-    top: 1000px;
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between; /* Sépare le contenu principal du bas */
-    align-items: center;
-    width: 100%;
-    background-color: #1c1c1c;
-    color: #fff;
-    padding: 20px 0;
-    height: 400px;
-    /* position: relative; */
-  }
-  
-  /* Contenu principal aligné horizontalement */
-  .footer-content {
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-around; /* Espacement uniforme entre les sections */
-    align-items: flex-start; 
-    width: 100%;
-    max-width: 1200px;
-    gap: 30px;
-    margin-bottom: 20px;
-  }
-  
-  /* Chaque section du footer */
-  .footer-section {
-    text-align: center;
-    /* border: 1px solid; */
-    /* margin: 20px; */
-    width: 30%; /* Assure une largeur égale pour chaque section */
-  }
-  
-  .footer-section h3 {
-    margin-bottom: 10px;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin-bottom: 5px;
-  }
-  
-  /* Section centrale avec le logo */
-  .footer-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .footer-logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  /* Formulaire de la newsletter */
-  .newsletter-container {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .newsletter-input {
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    width: 200px;
-  }
-  
-  .newsletter-button {
-    padding: 8px 12px;
-    background-color: #6a0dad;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .newsletter-button:hover {
-    background-color: #580b9e;
-  }
-  
-  /* Footer bottom (centré en bas) */
-  .footer-bottom {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #ccc;
-    margin-top: 20px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%; /* S'étend sur toute la largeur */
-  }
   
 
   
@@ -332,25 +312,19 @@
   .director-title{
     font-size: 15px;
   }
-  .director-text{
-    width: 100%;
-    /* border: 2px solid; */
-    overflow: hidden; /* Cache le texte qui dépasse */
-    text-align: justify; /* Justifie le texte */
-    white-space: normal; /* Permet le retour automatique à la ligne */
-    word-wrap: break-word; /* S'assure que les mots longs ne débordent pas */
-    overflow-wrap: break-word; 
-    font-size: 10px;
+  .section1{
+    top: 600px;
   }
+
 
 
 
   .footer-container{
     width: 100%;
-    height: 600px;
+    height: 500px;
     /* position: absolute; */
     flex-direction: column;
-    /* top: 3300px; */
+    top: 2500px;
   }
   .footer-center{
     display: none;
@@ -412,16 +386,7 @@
   .director-title{
     font-size: 20px;
   }
-  .director-text{
-    width: 100%;
-    /* border: 2px solid; */
-    overflow: hidden; /* Cache le texte qui dépasse */
-    text-align: justify; /* Justifie le texte */
-    white-space: normal; /* Permet le retour automatique à la ligne */
-    word-wrap: break-word; /* S'assure que les mots longs ne débordent pas */
-    overflow-wrap: break-word; 
-    font-size: 18px;
-  }
+
 
 
 }
@@ -455,16 +420,7 @@
   .director-title{
     font-size: 20px;
   }
-  .director-text{
-    width: 100%;
-    /* border: 2px solid; */
-    overflow: hidden; /* Cache le texte qui dépasse */
-    text-align: justify; /* Justifie le texte */
-    white-space: normal; /* Permet le retour automatique à la ligne */
-    word-wrap: break-word; /* S'assure que les mots longs ne débordent pas */
-    overflow-wrap: break-word; 
-    font-size: 18px;
-  }
+
 
 
 }
@@ -499,16 +455,7 @@
   .director-title{
     font-size: 20px;
   }
-  .director-text{
-    width: 100%;
-    /* border: 2px solid; */
-    overflow: hidden; /* Cache le texte qui dépasse */
-    text-align: justify; /* Justifie le texte */
-    white-space: normal; /* Permet le retour automatique à la ligne */
-    word-wrap: break-word; /* S'assure que les mots longs ne débordent pas */
-    overflow-wrap: break-word; 
-    font-size: 18px;
-  }
+
 
 
 }
@@ -522,4 +469,9 @@
       bottom: 500px;
       height: 300px;
     }
+    .section1{
+      width: 50%;
+      /* border: 1px solid; */
+    }
+  
 }

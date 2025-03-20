@@ -35,7 +35,20 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5); 
 }
+.slider-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%;
+}
 
+.slider-text h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
 /* Remove the import and start directly with CSS */
 .partenaire-container {
     padding: 40px 20px;
@@ -50,7 +63,7 @@
     font-size: 2.5rem;
     font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 300;
-    color: #6a0dad; /* Couleur principale */
+    color: #a00498; /* Couleur principale */
     margin-bottom: 30px;
     /* text-transform: uppercase; */
     /* font-weight: bold; */
@@ -87,6 +100,7 @@
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
     max-width: 200px;
+    
     text-align: center;
   }
   

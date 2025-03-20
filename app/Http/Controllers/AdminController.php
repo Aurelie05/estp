@@ -33,7 +33,7 @@ class AdminController extends Controller
 {
     $request->validate([
         'titre' => 'required|string|max:255',
-        'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120', // 5MB
     ]);
 
     $slider = new Slider();
@@ -84,7 +84,7 @@ class AdminController extends Controller
        // Validation des données de mise à jour
        $validated = $request->validate([
            'titre' => 'string|max:255',
-           'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+           'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120', // 5MB
        ]);
 
        // Mise à jour du slider
@@ -124,26 +124,28 @@ class AdminController extends Controller
        
      }
      public function dashboard()
-     {
-        $evenements = Evenement::select('id', 'titre', 'date', 'lieu')
-                                ->orderBy('date', 'desc')
-                                ->get();
-        if (Auth::check()) {                        
-        $userName = Auth::user()->name; // Récupérer l'utilisateur connecté
-        // dd($userName);  
-        } else {
-            $userName = 'Invité';
+{
+    $evenements = Evenement::select('id', 'titre', 'date', 'lieu')
+                            ->orderBy('date', 'desc')
+                            ->get();
+
+    $informations = Information::select('id', 'titre', 'image', 'nom_image', 'description')
+                                ->get(); // Récupérer les informations
+
+    if (Auth::check()) {                        
+        $userName = Auth::user()->name; 
+    } else {
+        $userName = 'Invité';
         return redirect()->route('login');
     }
-            // dd($userName); 
-         return Inertia::render('Dashboard', [
-             'evenements' => $evenements, // Envoyer les événements à Inertia
-             'userName' => $userName // Passer l'utilisateur à la vue
 
-         ]);
-         
-       
-     }
+    return Inertia::render('Dashboard', [
+        'evenements' => $evenements,
+        'informations' => $informations, // Ajout des informations
+        'userName' => $userName
+    ]);
+}
+
         public function welcome()
     {
         // Récupérer les événements pour la page d'accueil
@@ -165,7 +167,7 @@ class AdminController extends Controller
      {
          $request->validate([
              'titre' => 'required|string|max:255',
-             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120', // 5MB
              'date' => 'required|date',
              'lieu' => 'required|string|max:255',
              'description' => 'required|string',
@@ -243,6 +245,34 @@ class AdminController extends Controller
     
         // Retourner la page avec un message de succès
         return redirect()->route('presentation')->with('success', 'Information ajoutée avec succès');
+    }
+    public function edit($id)
+    {
+        $information = Information::findOrFail($id);
+        return inertia('InformationEdit', ['information' => $information]);
+    }
+    
+    
+    public function updateInformation(Request $request, $id)
+    {
+        $request->validate([
+            'titre' => 'required|string|max:255',
+            'description' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+    
+        $info = Information::findOrFail($id);
+    
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('informations', 'public');
+            $info->image = $imagePath;
+        }
+    
+        $info->titre = $request->titre;
+        $info->description = $request->description;
+        $info->save();
+    
+        return redirect()->route('dashboard')->with('success', 'Information mise à jour avec succès!');
     }
     
 
@@ -377,7 +407,7 @@ public function storeActualite(Request $request)
 {
     $request->validate([
         'titre' => 'required|string|max:255',
-        'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120', // 5MB
         'date' => 'required|date',
         'lieu' => 'required|string|max:255',
         'description' => 'required|string',

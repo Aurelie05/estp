@@ -1,8 +1,10 @@
-// import { PageProps } from '@/types';
-import { Head, Link, usePage } from '@inertiajs/react';
-// import usePage from '@inertiajs/react';
-import Guest from '@/Layouts/GuestLayout';
-import Slider from "react-slick";
+import Slider, { CustomArrowProps } from "react-slick";
+import { Head, Link, usePage } from "@inertiajs/react";
+import Guest from "@/Layouts/GuestLayout";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "@/Style/Welcome.css";
+import { useEffect } from "react"; // Ajout de useEffect pour les animations
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '@/Style/Welcome.css'
@@ -16,6 +18,10 @@ import Footer from '@/Layouts/Footer';
 import image2 from '@/Assets/INP-HB_files/cycles.png'
 import image3 from '@/Assets/INP-HB_files/cycle3.jpg'
 import image4 from '@/Assets/INP-HB_files/cycles2.png'
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 
 
 interface PageProp{
@@ -56,26 +62,73 @@ export default function Welcome({
     const { filieres = [] } = usePage().props as { filieres?: Filiere[] };
     const filieresTechSup = filieres.filter(filiere => filiere.cycle === "Cycle Technicien Supérieur");
     const filieresIngenieur = filieres.filter(filiere => filiere.cycle === "Cycle Ingénieur");
-    const handleImageError = () => {
-        document
-            .getElementById('screenshot-container')
-            ?.classList.add('!hidden');
-        document.getElementById('docs-card')?.classList.add('!row-span-1');
-        document
-            .getElementById('docs-card-content')
-            ?.classList.add('!flex-row');
-        document.getElementById('background')?.classList.add('!hidden');
+    const PrevArrow: React.FC<CustomArrowProps> = ({ className, style, onClick }) => {
+        return (
+            <div 
+                className={`${className} slick-arrow slick-prev`} 
+                style={{ ...style, display: "block", left: "10px", zIndex: 10, cursor: "pointer" }} 
+                onClick={onClick}
+            >
+                ◀
+            </div>
+        );
     };
+    
+    const NextArrow: React.FC<CustomArrowProps> = ({ className, style, onClick }) => {
+        return (
+            <div 
+                className={`${className} slick-arrow slick-next`} 
+                style={{ ...style, display: "block", right: "10px", zIndex: 10, cursor: "pointer" }} 
+                onClick={onClick}
+            >
+                ▶
+            </div>
+        );
+    };
+    
+    const programs = [
+        {
+          icon: "🎓",
+          title: "Cycle Technicien",
+          description: "Découvrez nos programmes BAC+3 en bâtiment, infrastructure et transport.",
+          buttonText: "En savoir plus",
+          buttonLink: "/cycletechnicien",
+        },
+        {
+          icon: "📈",
+          title: "Cycle Ingénieur",
+          description: "Explorez nos programmes BAC+5 en génie civil.",
+          buttonText: "En savoir plus",
+          buttonLink: "/cycleingenieur",
+        },
+        {
+          icon: "👥",
+          title: "Admissions",
+          description: "Comment intégrer notre école.",
+          buttonText: "Postuler maintenant",
+          buttonLink: "https://inphb.ci/concours",
+        },
+      ];
+    
     console.log('Événements:', evenements); 
-        const settings = {
-          dots: true,              // Affiche les points de navigation
-          infinite: true,          // Boucle infinie
-          speed: 500,              // Vitesse de transition en ms
-          slidesToShow: 1,         // Nombre de slides visibles en même temps
-          slidesToScroll: 1,       // Nombre de slides à faire défiler à chaque fois
-          autoplay: true,          // Active le défilement automatique
-          autoplaySpeed: 3000,     // Intervalle entre chaque défilement automatique
-        };
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 1000, // Animation plus fluide
+        fade: true, // Effet fondu entre les images
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        
+    };
+    
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Durée de l'animation
+            once: false, // Permet de rejouer l'animation à chaque passage
+        });
+    }, []);  
 
         
           
@@ -84,45 +137,74 @@ export default function Welcome({
         <Guest>
             {/* <Head title="INP-HB" /> */}
             <div className='welcomecontainer'>
-                <div className="imageslider ">
-                    <Slider {...settings}>
-                        {sliders && sliders.length > 0 ? (
-                            sliders.map(slider => (
-                                <div key={slider.id}>
-                                    <img src={`/storage/${slider.image}`} alt={slider.titre} />
+            <div className="imageslider">
+                <Slider {...settings}>
+                    {sliders && sliders.length > 0 ? (
+                        sliders.map(slider => (
+                            <div key={slider.id} className="slider-item">
+                                {/* Image du slider */}
+                                <img src={`/storage/${slider.image}`} alt="Slider" className="slider-image" />
+                                {/* Overlay noir semi-transparent */}
+                                <div className="overlay"></div>
+                                {/* Texte fixe affiché sur toutes les images */}
+                                <div className="slider-text">
+                                    <h2>Bienvenue à l'ESTP</h2>
+                                    <p>Ecole superieure des travaux publics</p>
+                                    <div className="slider-buttons">
+                                        <button className=" btn-primary" onClick={(e) => { e.preventDefault(); window.open('/ecole','_self'); }}>Nos Formations</button>
+                                        <button className="btn btn-outline-light">Contactez-Nous</button>
+                                    </div>
+                                    
                                 </div>
-                            ))
-                        ) : (
-                            <p>Aucun slider disponible.</p>
-                        )}
-                    </Slider>
-                </div>
+                            </div>
+                        ))
+                    ) : (
+                        <p>Aucun slider disponible.</p>
+                    )}
+                </Slider>
+            </div>
 
-                <div className="text-box">
-                    <h1>
-                        <span className="line2"></span>
-                        PRESENTATION
-                    </h1>
-                    <p className='text-box1'>
-                        Crée en 1963, l'Ecole Nationale Supérieure des Travaux Publics (ENSTP) initialement à Abidjan a été transférée à Yamoussoukro en 1979. À la faveur de la restructuration des grandes écoles de Yamoussoukro en 1996, l'INP-HB a été créé. Il regroupe huit (08) grandes écoles dont l'Ecole Supérieure des Travaux Publics (ESTP). Transfuge de l'ex-ENSTP, l'ESTP est chargée d'assurer la formation initiale dans le domaine du Génie Civil.
-                    </p>
-                    <p className='text-box2'>
-                        L'ESTP a pour mission :
-                    </p>
-                    <ul className='text-box3'>
-                        <li>la Formation initiale de Techniciens Supérieurs et d'Ingénieurs dans les domaines du Génie Civil et de toutes spécialités connexes.</li>
-                        <li>la Production</li>
-                        <li>la Prestation et expertise pour les entreprises et les collectivités locales</li>
-                    </ul>
-                    <button className="voir-plus-btn" onClick={ () => window.open('/presentation','_self')}>
-                        Voir plus
-                    </button>
-                </div>
+            
+            <div className="cards-container">
+    {programs.map((program, index) => (
+        <div key={index} className="card" data-aos="zoom-in-left" data-aos-once="false">
+            <div className="icon">{program.icon}</div>
+            <h3 className="title">{program.title}</h3>
+            <p className="description">{program.description}</p>
 
+            {program.buttonText && program.buttonLink && (
+                <button className="button" onClick={() => window.open(program.buttonLink, "_self")}>
+                    {program.buttonText}
+                </button>
+            )}
+        </div>
+    ))}
+</div>
+
+        {/* <div style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <div 
+                data-aos="zoom-out"
+                style={{
+                    width: "200px",
+                    height: "200px",
+                    backgroundColor: "red",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "white",
+                    fontSize: "20px",
+                    fontWeight: "bold"
+                }}
+            >
+                Zoom Out Test
+            </div>
+        </div> */}
+
+        
                 <div className="events-container">
                     <h1 className="events-title">
                         <span className="line2"></span>
-                        NOS EVENEMENTS
+                        Nos Evénements
                     </h1>
                     <div className="events-cards">
                         {(evenements && evenements.length > 0) ? (
@@ -145,84 +227,6 @@ export default function Welcome({
                         ) : (
                             <p>Aucun événement pour le moment.</p>
                         )}
-                    </div>
-                </div>
-                
-                
-                <div className='box4'>
-                    <h2>
-                        <span className="line2"></span>
-                            CYCLES DE FORMATION
-                    </h2>
-                    <div className='boximage'>
-                        <img src={image2} alt="" />
-                    </div>
-                    <div className='boxliste'>
-                        <h1>Cycle Technicien Supérieur</h1>
-                        <ul>
-                            {filieresTechSup.length > 0 ? (
-                                filieresTechSup.map(filiere => (
-                                    <li key={filiere.id}>{filiere.nom_filiere}</li>
-                                ))
-                            ) : (
-                                <li>Aucune filière disponible</li>
-                            )}
-                        </ul>
-                    </div>
-                </div>
-
-                <div className='box5'>
-                
-                    <div className='boximage2'>
-                        <img src={image3} alt="" />
-                    </div>
-                    <div className='boxliste'>
-                <h1>Cycle Technicien Supérieur</h1>
-                <ul>
-                    {filieresTechSup.length > 0 ? (
-                        filieresTechSup.map(filiere => (
-                            <li key={filiere.id}>{filiere.nom_filiere}</li>
-                        ))
-                    ) : (
-                        <li>Aucune filière disponible</li>
-                    )}
-                </ul>
-            </div>
-                </div>
-
-                <div className='box6'>
-                    <h2>
-                        <span className="line2"></span>
-                        COMMENT INTEGRER NOTRE ECOLE
-                    </h2>
-                    <div className='boximage2'>
-                        <img src={image4} alt="" />
-                    </div>
-                    <div className='boxliste'>
-                        <p>
-                            <h1>Cycle des Ingénieurs de conception</h1>
-                            <b>Concours Génie Mécanique, Énergétique et Civil (GMEC)</b><br />
-                            Le concours est ouvert aux classes préparatoires 
-                            technologiques 2ème année, aux titulaires d'un DUT ou d'un
-                            DTS d'une des spécialités du concours GMEC ou aux titulaires
-                            d'un DEUG option Mathématiques et Physique...
-                        </p>
-                    </div>
-                </div>
-
-                <div className='box7'>
-                    
-                    <div className='boximage2'>
-                        <img src={image2} alt="" />
-                    </div>
-                    <div className='boxliste'>
-                        <p>
-                            <h1>Cycle des Techniciens Supérieurs</h1>
-                            <b>Concours Génie Civil (GMEC)</b><br />
-                            Le concours ouvert aux titulaires d'un 
-                            Baccalauréat série C, D, E, F4 et ou d'un BT 
-                            de l'année en cours....
-                        </p>
                     </div>
                 </div>
                 
