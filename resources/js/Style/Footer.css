@@ -124,20 +124,26 @@
 
  
   @media (min-width: 320px) and (max-width: 768px) {
-    .footer-container{
-      width: 100vw;
-      height: 800px;
-      position: absolute;
+    .footer-container {
+      width: 100%;
+      height: auto; /* Ajustement de la hauteur pour éviter un grand espace vide */
+      position: relative; /* Éviter un décalage avec `absolute` */
+      display: flex;
       flex-direction: column;
-      top: 3000px;
-    }
-    .footer-left,
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0; /* Ajouter un padding pour l'espacement */
+  }
+
+  .footer-left,
   .footer-links,
   .footer-contact {
-    align-items: center;
-    flex-direction: column; /* Ajouté pour afficher en colonne */
-    margin-right: 0; /* Réinitialiser la marge droite */
-    margin-bottom: 10px; /* Ajuster la marge inférieure */
+      display: flex;
+      flex-direction: column; /* Alignement en colonne */
+      align-items: center; /* Centrage horizontal */
+      text-align: center; /* Centrage du texte */
+      width: 100%; /* Assurer un bon affichage sur petits écrans */
+      margin-bottom: 15px; /* Espacement entre les sections */
   }
     
     h3{
@@ -149,9 +155,12 @@
   }
   @media screen and (min-width: 769px) and  (max-width: 992px) {
       .footer-container{
+        width: 100%;
         position: absolute;
         top: 2000px;
       }
+      
+     
     }
   @media screen and (min-width: 993px) and  (max-width: 1200px) {
     .footer-container{
