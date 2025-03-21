@@ -125,9 +125,10 @@
  
   @media (min-width: 320px) and (max-width: 768px) {
     .footer-container {
+      top: 3000px;
       width: 100%;
       height: auto; /* Ajustement de la hauteur pour éviter un grand espace vide */
-      position: relative; /* Éviter un décalage avec `absolute` */
+      position: absolute; /* Éviter un décalage avec `absolute` */
       display: flex;
       flex-direction: column;
       justify-content: center;
