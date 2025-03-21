@@ -316,46 +316,12 @@ p {
     top: 600px;
   }
 
+.points-forts-section{
+  top: 1000px;
+}
 
 
-
-  .footer-container{
-    width: 100%;
-    height: 500px;
-    /* position: absolute; */
-    flex-direction: column;
-    top: 2500px;
-  }
-  .footer-center{
-    display: none;
-  }
-  .footer-section{
-    margin-bottom: 40px;
-  }
-
-  h3{
-    font-size: 15px;
-
-    color: #6a0dad;
-  }
- 
-  .footer-center{
-    display: none;
-  }
-  .footer-section{
-    margin-bottom: 40px;
-  }
-
-  h3{
-    font-size: 15px;
-
-    color: #6a0dad;
-  }
-  .footer-bottom{
-    /* margin-top: 50px; */
-    height: 30px;
-    /* border: 1px solid violet; */
-  }
+  
  }
  /* Petits ordinateurs portables */
 @media screen and (min-width: 769px) and (max-width: 992px) {
@@ -470,7 +436,7 @@ p {
       height: 300px;
     }
     .section1{
-      width: 50%;
+      width: 70%;
       /* border: 1px solid; */
     }
   
