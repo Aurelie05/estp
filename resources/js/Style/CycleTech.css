@@ -154,3 +154,14 @@ body{
         /* border: 1px solid; */
     }
 }
+@media screen and (min-width: 1441px) {
+    
+    .filiere-card {
+        width: 27%; /* Prend presque toute la largeur */
+    }
+    .filiere-container{
+        display: flex;
+        width: 100%;
+        /* border: 1px solid; */
+    }
+}
