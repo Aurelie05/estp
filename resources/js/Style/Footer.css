@@ -133,6 +133,7 @@
     .footer-left,
   .footer-links,
   .footer-contact {
+    align-items: center;
     flex-direction: column; /* Ajouté pour afficher en colonne */
     margin-right: 0; /* Réinitialiser la marge droite */
     margin-bottom: 10px; /* Ajuster la marge inférieure */
