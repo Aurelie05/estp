@@ -62,29 +62,9 @@ export default function Welcome({
     const { filieres = [] } = usePage().props as { filieres?: Filiere[] };
     const filieresTechSup = filieres.filter(filiere => filiere.cycle === "Cycle Technicien Supérieur");
     const filieresIngenieur = filieres.filter(filiere => filiere.cycle === "Cycle Ingénieur");
-    const PrevArrow: React.FC<CustomArrowProps> = ({ className, style, onClick }) => {
-        return (
-            <div 
-                className={`${className} slick-arrow slick-prev`} 
-                style={{ ...style, display: "block", left: "10px", zIndex: 10, cursor: "pointer" }} 
-                onClick={onClick}
-            >
-                ◀
-            </div>
-        );
-    };
     
-    const NextArrow: React.FC<CustomArrowProps> = ({ className, style, onClick }) => {
-        return (
-            <div 
-                className={`${className} slick-arrow slick-next`} 
-                style={{ ...style, display: "block", right: "10px", zIndex: 10, cursor: "pointer" }} 
-                onClick={onClick}
-            >
-                ▶
-            </div>
-        );
-    };
+    
+    
     
     const programs = [
         {
