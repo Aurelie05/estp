@@ -375,7 +375,8 @@
       
     }
     .footer-container {
-      top: 3800px;
+      top: 4000px;
+      background-color: #a00498;
       width: 100%;
       height: auto; /* Ajustement de la hauteur pour éviter un grand espace vide */
       position: absolute; /* Éviter un décalage avec `absolute` */
