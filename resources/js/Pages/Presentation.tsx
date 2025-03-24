@@ -143,9 +143,9 @@ useEffect(() => {
 
         <section className="points-forts-section">
           <h2>Nos points forts</h2>
-          <div className="points-forts-container" data-aos="zoom-out-down" data-aos-once="false">
+          <div className="points-forts-container" >
             {pointsForts.map((point, index) => (
-              <div key={index} className="point-card">
+              <div key={index} className="point-card" data-aos="zoom-out-up" data-aos-once="false">
                 <div className="icon">{point.icon}</div>
                 <h3>{point.title}</h3>
                 <p>{point.description}</p>

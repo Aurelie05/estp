@@ -81,7 +81,7 @@ body{
 }
 
 .slider-text p {
-    color: #a00498;
+    color: #ffffff;
     font-size: 1.2rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 20px;
@@ -149,7 +149,7 @@ body{
   
   .icon {
     font-size: 40px;
-    background-color: #a00498;
+    background-color: #c6dbc2;
     color: white;
     width: 60px;
     height: 60px;
@@ -174,8 +174,8 @@ body{
   
   .button {
     padding: 8px 15px;
-    border: 2px solid #a00498;
-    color: #a00498;
+    border: 2px solid #206903;
+    color: #6d6d6d;
     background: none;
     border-radius: 5px;
     cursor: pointer;
@@ -183,7 +183,7 @@ body{
   }
   
   .button:hover {
-    background: #a00498;
+    background: #206903;
     color: white;
   }
   
@@ -465,7 +465,7 @@ body{
     display: inline-block;
     width: 5px;
     height: 27px;
-    background-color: #a00498;
+    background-color: #206903;
     margin-right: 10px;
   }
   

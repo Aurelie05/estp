@@ -47,7 +47,7 @@ const Ecoles = () => {
                 <h1>Cycle Technicien Supérieur<FaCircleArrowDown /></h1>
                 <div className="schools-list">
                     {filieresTechnicien.map((filiere, index) => (
-                        <div key={index} className="school-block" style={{ borderLeft: `10px solid #6a0dad` }}>
+                        <div key={index} className="school-block" style={{ borderLeft: `10px solid #555` }}>
                             <div className="school-info">
                                 <h4>{filiere.nom_filiere}</h4>
                                 <p>{filiere.debouchés}</p>
@@ -62,7 +62,7 @@ const Ecoles = () => {
           <h1>Cycle Ingénieur<FaCircleArrowDown /></h1>
           <div className="schools-list">
                     {filieresIngenieur.map((filiere, index) => (
-                        <div key={index} className="school-block" style={{ borderLeft: `10px solid #6a0dad` }}>
+                        <div key={index} className="school-block" style={{ borderLeft: `10px solid #555` }}>
                             <div className="school-info">
                                 <h4>{filiere.nom_filiere}</h4>
                                 <p>{filiere.debouchés}</p>
