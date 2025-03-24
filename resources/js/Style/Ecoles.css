@@ -375,7 +375,7 @@
       
     }
     .footer-container {
-      top: 3000px;
+      top: 3500px;
       width: 100%;
       height: auto; /* Ajustement de la hauteur pour éviter un grand espace vide */
       position: absolute; /* Éviter un décalage avec `absolute` */
