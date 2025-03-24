@@ -376,15 +376,10 @@
     }
     .footer-container {
       top: 4000px;
-      background-color: #a00498;
+      position: absolute;
+      /* background-color: #a00498; */
       width: 100%;
-      height: auto; /* Ajustement de la hauteur pour éviter un grand espace vide */
-      position: absolute; /* Éviter un décalage avec `absolute` */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 0; /* Ajouter un padding pour l'espacement */
+      
   }
 
   .footer-left,
