@@ -55,9 +55,10 @@
 /* PageFormation.css */
 
 .page-formation-alt {
+  z-index: 1000;
     position: relative;
     top: 80px;
-    height: auto;
+    height: 1500px;
     border: 2px solid blue;
     padding: 20px;
   }
