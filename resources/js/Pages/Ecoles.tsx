@@ -69,56 +69,43 @@ const Ecoles = () => {
                 </div>
         </div>
 
-        {/* <div className='box8'>
-                    <h2>
-                        Débouchés <FaCircleArrowDown />
-                    </h2>
-                    <div className="table-container">
-                        {rows.map((row, index) => (
-                            <div className="table-row" key={index}>
-                            <div className="table-title">{row.title}</div>
-                            <div className="table-description">{row.description}</div>
-                            </div>
-                        ))}
-                    </div>
-        </div> */}
       </div>
 
 
 
-      {/* <footer className="footer-container">
-      <div className="footer-section">
-        <h3>ECOLE SUPERIEURE DES TRAVAUX PUBLICS</h3>
+      <footer className="footer-container">
+      <div className="footer-left">
+        <h3>ESTP</h3>
+        <p>École Supérieure des travaux publiques</p>
+        
+      </div>
+
+      <div className="footer-links">
+        <h3>Liens rapides</h3>
         <ul>
-          <li>Contacts</li>
-          <li>Adresse électronique</li>
-          <li>Nous suivre sur les réseaux</li>
+          <li onClick={(e) => { e.preventDefault(); window.open('/','_self'); }}>Accueil</li>
+          <li onClick={(e) => { e.preventDefault(); window.open('/presentation','_self'); }}>Présentation</li>
+          <li onClick={(e) => { e.preventDefault(); window.open('/ecole','_self'); }}>Filières</li>
+          <li onClick={(e) => { e.preventDefault(); window.open('/partenaire','_self'); }}>Partenaires</li>
+          <li onClick={(e) => { e.preventDefault(); window.open('/actualites/page','_self'); }}>Actualités</li>
+          <li><a className="no-underline" href="https://www.careercenter.inphb.app/" target="_blank" rel="noopener noreferrer">Offres de stage</a></li>
         </ul>
+
       </div>
 
-      <div className="footer-center">
-        <img src={logo} alt="Logo ESTP" className="footer-logo" />
-        <p>Newsletter</p>
-        <div className="newsletter-container">
-          <input type="email" placeholder="Votre email" className="newsletter-input" />
-          <button className="newsletter-button">SOUMETTRE</button>
-        </div>
+      <div className="footer-contact">
+        <h3>Contact</h3>
+        <p>📍 INP-HB SUD, Yamoussoukro, Côte d'Ivoire</p>
+        <p>📞 +225 27 30 64 66 61 | 05 01 80 00 19</p>
+        <p>✉️ <a href="mailto:secretariat.escae@inphb.ci">secretariat.estp@inphb.ci</a></p>
       </div>
 
-      <div className="footer-section">
-        <h3>NOS PARTENAIRES</h3>
-        <ul>
-          <li>Contacts</li>
-          <li>Adresse électronique</li>
-          <li>Nous suivre sur les réseaux</li>
-        </ul>
-        </div>
-    
       <div className="footer-bottom">
-        <p>By INP-HB Digital Copyright © 2025</p>
+        <p>© 2025 ESTP. Tous droits réservés.</p>
+        
       </div>
-      </footer>             */}
-      <Footer></Footer>
+    </footer>
+      {/* <Footer></Footer> */}
     </Guest>
   );
 };
