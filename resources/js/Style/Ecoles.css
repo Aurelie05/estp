@@ -57,6 +57,8 @@
 .page-formation-alt {
     position: relative;
     top: 80px;
+    height: auto;
+    border: 2px solid blue;
     padding: 20px;
   }
   .page-formation-alt h1 {
@@ -375,7 +377,7 @@
       
     }
     .footer-container {
-      /* top: 2000px; */
+      top: 2600px;
       position: absolute;
       /* background-color: #a00498; */
       /* width: 100%; */
