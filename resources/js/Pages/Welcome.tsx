@@ -105,9 +105,10 @@ export default function Welcome({
     
     useEffect(() => {
         AOS.init({
-            duration: 1000, // Durée de l'animation
+            duration: 80, // Durée de l'animation
             once: false, // Permet de rejouer l'animation à chaque passage
         });
+        AOS.refresh();
     }, []);  
 
         
@@ -147,7 +148,7 @@ export default function Welcome({
             
             <div className="cards-container">
     {programs.map((program, index) => (
-        <div key={index} className="card" data-aos="zoom-in-left" data-aos-once="false">
+        <div key={index} className="card" data-aos="zoom-out-down" data-aos-once="false">
             <div className="icon">{program.icon}</div>
             <h3 className="title">{program.title}</h3>
             <p className="description">{program.description}</p>
@@ -161,26 +162,6 @@ export default function Welcome({
     ))}
 </div>
 
-        {/* <div style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <div 
-                data-aos="zoom-out"
-                style={{
-                    width: "200px",
-                    height: "200px",
-                    backgroundColor: "red",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    color: "white",
-                    fontSize: "20px",
-                    fontWeight: "bold"
-                }}
-            >
-                Zoom Out Test
-            </div>
-        </div> */}
-
-        
                 <div className="events-container">
                     <h1 className="events-title">
                         <span className="line2"></span>
