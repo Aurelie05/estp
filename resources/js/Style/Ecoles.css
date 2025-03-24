@@ -375,12 +375,12 @@
       
     }
     .footer-container {
-      top: 2000px;
+      /* top: 2000px; */
       position: absolute;
       /* background-color: #a00498; */
-      width: 100%;
+      /* width: 100%; */
       
-  }
+    }
 
   .footer-left,
   .footer-links,
