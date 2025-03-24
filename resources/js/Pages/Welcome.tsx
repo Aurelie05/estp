@@ -150,10 +150,10 @@ export default function Welcome({
                                 <div className="slider-text">
                                     <h2>Bienvenue à l'ESTP</h2>
                                     <p>Ecole superieure des travaux publics</p>
-                                    <div className="slider-buttons">
+                                    {/* <div className="slider-buttons">
                                         <button className=" btn-primary" onClick={(e) => { e.preventDefault(); window.open('/ecole','_self'); }}>Nos Formations</button>
                                         <button className="btn btn-outline-light">Contactez-Nous</button>
-                                    </div>
+                                    </div> */}
                                     
                                 </div>
                             </div>

@@ -81,6 +81,7 @@ body{
 }
 
 .slider-text p {
+    color: #a00498;
     font-size: 1.0rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 30px;
