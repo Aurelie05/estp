@@ -1,8 +1,6 @@
 .presentation-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: auto;
 }
 
 /* Conteneur de l'image floutée */
@@ -55,11 +53,11 @@
 /* PageFormation.css */
 
 .page-formation-alt {
-  z-index: 1000;
-    position: relative;
-    top: 80px;
-    height: 1500px;
-    border: 2px solid blue;
+  /* z-index: 1000; */
+    position: absolute;
+    /* top: 80px; */
+    /* height: 1500px; */
+    /* border: 2px solid blue; */
     padding: 20px;
   }
   .page-formation-alt h1 {

@@ -28,6 +28,9 @@ const Ecoles = () => {
 
   return (
     <Guest>
+    <div className='presentation-container'>
+
+    
       <div className="blurred-image-container">
             <img
             src={image} // Remplace par l'URL de ton image
@@ -104,8 +107,9 @@ const Ecoles = () => {
         <p>© 2025 ESTP. Tous droits réservés.</p>
         
       </div>
-    </footer>
+      </footer>
       {/* <Footer></Footer> */}
+    </div>
     </Guest>
   );
 };
