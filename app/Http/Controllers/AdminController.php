@@ -274,7 +274,21 @@ class AdminController extends Controller
     
         return redirect()->route('dashboard')->with('success', 'Information mise à jour avec succès!');
     }
+    // Suppression d'une information
+    public function deleteInformation($id)
+    {
+        $information = Information::find($id);
     
+        if (!$information) {
+            return to_route('dashboard')->with('error', 'Information introuvable');
+        }
+    
+        $information->delete();
+    
+        return to_route('dashboard')->with('success', 'Information supprimée avec succès');
+    }
+    
+
 
 public function showImage($id)
 {

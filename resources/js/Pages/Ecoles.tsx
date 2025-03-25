@@ -45,10 +45,10 @@ const Ecoles = () => {
       </div>
       <div className="page-formation-alt">
                 <h1>Cycle Technicien Supérieur<FaCircleArrowDown /></h1>
-                <div className="schools-list">
+                <div className="schools-list" >
                     {filieresTechnicien.map((filiere, index) => (
-                        <div key={index} className="school-block" style={{ borderLeft: `10px solid #555` }}>
-                            <div className="school-info">
+                        <div key={index} className="school-block" data-aos="zoom-out-up" data-aos-once="false" style={{ borderLeft: `10px solid #555` }}>
+                            <div className="school-info" >
                                 <h4>{filiere.nom_filiere}</h4>
                                 <p>{filiere.debouchés}</p>
                             </div>
@@ -60,10 +60,10 @@ const Ecoles = () => {
 
         <div className="page-formation-alt2">
           <h1>Cycle Ingénieur<FaCircleArrowDown /></h1>
-          <div className="schools-list">
+          <div className="schools-list" >
                     {filieresIngenieur.map((filiere, index) => (
-                        <div key={index} className="school-block" style={{ borderLeft: `10px solid #555` }}>
-                            <div className="school-info">
+                        <div key={index} className="school-block" data-aos="zoom-out-up" data-aos-once="false" style={{ borderLeft: `10px solid #555` }}>
+                            <div className="school-info" >
                                 <h4>{filiere.nom_filiere}</h4>
                                 <p>{filiere.debouchés}</p>
                             </div>

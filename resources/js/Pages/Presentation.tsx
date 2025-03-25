@@ -1,5 +1,6 @@
-import React from "react";
+// import React from "react";
 import { usePage } from '@inertiajs/react';
+import React, { useState } from "react";
 import logo from '@/Assets/ESTP.f30db3437790b8dbc7d7.png'
 import Guest from '@/Layouts/GuestLayout';
 import '@/Style/Presentation.css'
@@ -80,6 +81,10 @@ useEffect(() => {
   });
 }, []); 
 
+const [isOpen, setIsOpen] = useState(false);
+const [selectedId, setSelectedId] = useState<number | null>(null);
+
+
   return (
     <Guest>
     <div className="presentation-container">
@@ -94,7 +99,7 @@ useEffect(() => {
             className="background-image"
             />
             <div className="overlay"></div>
-      </div><div data-aos="fade-down"></div>
+      </div>
         <div className="presentation-section" data-aos="flip-up" data-aos-once="false">
             {informations && informations.length > 0 ? (
                 informations.map((information) => (
@@ -111,6 +116,19 @@ useEffect(() => {
                             <p className="director-text">
                                 {information.description ?? 'Aucune information disponible.'}
                             </p>
+                            <div className="voir">
+                            <button
+                                        className="open-button"
+                                        onClick={() => {
+                                            setSelectedId(information.id);  // ✅ Enregistre l'ID sélectionné
+                                            setIsOpen(true);
+                                        }}
+                                    >
+                                        Voir plus
+                                    </button>
+                              
+                            </div>
+
                         </div>
                     </div>
                 ))
@@ -118,7 +136,26 @@ useEffect(() => {
                 <p>Aucune information disponible.</p>  // Message si le tableau est vide
             )}
         </div>
-        <div className="section1">
+        <div>
+
+{isOpen && (
+  <div className="modal-overlay">
+      <div className="modal-content">
+          <h2>Mot du Directeur</h2>
+          <p className="director-texto">
+              {informations.find(info => info.id === selectedId)?.description ?? 'Aucune information disponible.'}
+          </p>
+          <button 
+              className="close-button" 
+              onClick={() => setIsOpen(false)}
+          >
+              Fermer
+          </button>
+      </div>
+  </div>
+)}
+</div>
+        <div className="section1" data-aos="zoom-out-up" data-aos-once="false">
           <h2>A propos</h2>
           <p className="text-section">Crée en 1963, l’École Nationale Supérieure des travaux
             Publics (ENSTP) initialement à Abidjan a été transférée
@@ -150,6 +187,7 @@ useEffect(() => {
                 <h3>{point.title}</h3>
                 <p>{point.description}</p>
               </div>
+              
             ))}
           </div>
         </section>

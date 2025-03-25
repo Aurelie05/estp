@@ -176,6 +176,30 @@ body{
   box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.4); /* Ombre au focus */
 }
 
+.button-group {
+  display: flex;
+  gap: 10px; /* Espacement entre les boutons */
+  margin-top: 10px;
+}
+
+.btn-modifier {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-supprimer {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .search-bar{
     display: none;

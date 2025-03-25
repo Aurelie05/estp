@@ -8,6 +8,7 @@ import { usePage } from '@inertiajs/react';
 import { IoPersonCircleSharp } from "react-icons/io5";
 import '@/Style/Dash.css';
 import AOS from "aos";
+import { Inertia } from '@inertiajs/inertia';
 import "aos/dist/aos.css";
 
 
@@ -50,7 +51,15 @@ export default function Dashboard() {
         once: false, // Permet de rejouer l'animation à chaque passage
     });
 }, []);  
-
+const deleteInformation = (id: number) => {
+    if (confirm("Voulez-vous vraiment supprimer cette information ?")) {
+        Inertia.delete(`/information/${id}`, {
+            onSuccess: () => {
+                console.log("Information supprimée avec succès !");
+            }
+        });
+    }
+};
     return (
 
         <AuthenticatedLayout>
@@ -112,32 +121,43 @@ export default function Dashboard() {
 
                 )}
                 <div className="events-summary2 bg-gray-200 p-6 rounded-lg shadow-lg mt-8 m-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-4">Informations récentes</h2>
+    <h2 className="text-xl font-semibold text-gray-800 mb-4">Informations récentes</h2>
 
-                    <div className="events-list2">
-                        {Array.isArray(informations) && informations.length > 0 ? (
-                            informations.map((information) => (
-                                <div key={information.id} className="event-card2 p-4 border-b border-gray-200">
-                                    <div className="director-image">
-                                        <img src={`/storage/${information.image}`} alt={information.nom_image ?? 'Information'} />
-                                    </div>
-                                    <h3 className="text-lg font-medium">{information.titre ?? 'Titre indisponible'}</h3>
-                                    <p className="text-sm text-gray-600">{information.description ?? 'Aucune description disponible.'}</p>
-                                    {/* Bouton Modifier */}
-                                    <button 
-                                        onClick={() => window.open(`/information/edit/${information.id}`, '_self')}
-                                        className="btn-modifier"
-                                    >   
-                                     Modifier
-                                    </button>
+    <div className="events-list2">
+        {Array.isArray(informations) && informations.length > 0 ? (
+            informations.map((information) => (
+                <div key={information.id} className="event-card2 p-4 border-b border-gray-200">
+                    <div className="director-image">
+                        <img src={`/storage/${information.image}`} alt={information.nom_image ?? 'Information'} />
+                    </div>
+                    <h3 className="text-lg font-medium">{information.titre ?? 'Titre indisponible'}</h3>
+                    <p className="text-sm text-gray-600">{information.description ?? 'Aucune description disponible.'}</p>
+                    
+                    <div className="button-group">
+                        {/* Bouton Modifier */}
+                        <button 
+                            onClick={() => window.open(`/information/edit/${information.id}`, '_self')}
+                            className="btn-modifier"
+                        >   
+                            Modifier
+                        </button>
 
-                                </div>
-                            ))
-                        ) : (
-                            <p className="text-gray-500">Aucune information disponible.</p>
-                        )}
+                        {/* Bouton Supprimer */}
+                        <button 
+                            onClick={() => deleteInformation(information.id)}
+                            className="btn-supprimer"
+                        >   
+                            Supprimer
+                        </button>
                     </div>
                 </div>
+            ))
+        ) : (
+            <p className="text-gray-500">Aucune information disponible.</p>
+        )}
+    </div>
+</div>
+
 
 
             </main>

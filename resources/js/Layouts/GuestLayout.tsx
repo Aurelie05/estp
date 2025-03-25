@@ -66,7 +66,7 @@ export default function Guest({ children }: PropsWithChildren) {
                     <div className='menu ' onClick={ () => window.open('/ecole','_self')}>Filieres</div>
                     <div className='menu  ' onClick={ () => window.open('/partenaire','_self')}>Partenaires</div>
                     <div className='menu ' onClick={ () => window.open('/actualites/page','_self')}>Actualités</div>
-                    <div className='menu ' ><a className="no-underline2" href="https://www.careercenter.inphb.app/" target="_blank" rel="noopener noreferrer">Offres de stage</a> </div>
+                    <div className='menus ' ><a className="no-underline2" href="https://www.careercenter.inphb.app/" target="_blank" rel="noopener noreferrer">Offres de stage</a> </div>
                     
 
                 </div>
@@ -103,7 +103,7 @@ export default function Guest({ children }: PropsWithChildren) {
                         <li onClick={ () => window.open('/ecole','_self')}>Filieres</li>
                         <li onClick={ () => window.open('/partenaire','_self')}>Partenaires</li>
                         <li  onClick={ () => window.open('/actualites/page','_self')}>Actualités</li>
-                        <li>Offres de stage</li>
+                        <li> <a className="no-underline2" href="https://www.careercenter.inphb.app/" target="_blank" rel="noopener noreferrer">Offres de stage</a></li>
                     </ul>
                     
                 </nav>

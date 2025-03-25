@@ -101,16 +101,21 @@ body{
     display: flex;
     justify-content: center;
     gap: 15px;
+    pointer-events: auto;
 }
 
 
-
+.slider-buttons button {
+    position: relative;
+    z-index: 10; /* Assure qu'ils sont au-dessus du slider */
+    pointer-events: auto; /* Rétablit les clics */
+}
 .btn-primary {
     padding: 10px 20px;
     font-size: 1rem;
     border: none;
     cursor: pointer;
-    background-color: #81257d;
+    background-color: #206903;
     color: white;
     border-radius: 5px;
 }
@@ -128,7 +133,7 @@ body{
 .cards-container {
     /* display: flex; */
     position: absolute;
-    top: 600px;
+    top: 800px;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -362,7 +367,7 @@ body{
 /* Container principal */
 .events-container {
     position: absolute;
-    top: 1000px;
+    top: 1100px;
     width: 100%;
     /* height: 700px; */
     text-align: center;

@@ -94,18 +94,23 @@ export default function Welcome({
     const settings = {
         dots: true,
         infinite: true,
-        speed: 1000, // Animation plus fluide
-        fade: true, // Effet fondu entre les images
+        speed: 1000,
+        fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
-        
+        pauseOnHover: false,
+        draggable: false,
+        swipe: false, // ✅ Désactive le swipe pour éviter les conflits
+        focusOnSelect: true, // ✅ Permet de cliquer même dans un slide actif
+    cssEase: "linear" // ✅ Évite que fade bloque les interactions
     };
+    
     
     useEffect(() => {
         AOS.init({
-            duration: 80, // Durée de l'animation
+            duration: 1000, // Durée de l'animation
             once: false, // Permet de rejouer l'animation à chaque passage
         });
         AOS.refresh();
@@ -132,11 +137,12 @@ export default function Welcome({
                                     <h2>Bienvenue à l'ESTP</h2>
                                     <p>Ecole superieure des travaux publics</p>
                                     {/* <div className="slider-buttons">
-                                        <button className=" btn-primary" onClick={(e) => { e.preventDefault(); window.open('/ecole','_self'); }}>Nos Formations</button>
+                                        <button className="btn-primary" onClick={ () =>  window.open('/ecole','_self')} >Nos Formations</button>
                                         <button className="btn btn-outline-light">Contactez-Nous</button>
                                     </div> */}
                                     
                                 </div>
+                               
                             </div>
                         ))
                     ) : (
@@ -170,7 +176,7 @@ export default function Welcome({
                     <div className="events-cards">
                         {(evenements && evenements.length > 0) ? (
                             evenements.map((event) => (
-                                <div key={event.id} className="event-card">
+                                <div key={event.id} className="event-card" data-aos="zoom-out-up" data-aos-once="false">
                                     <img
                                         src={`/storage/${event.image}`}
                                         // alt={event.titre}

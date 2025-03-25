@@ -104,6 +104,7 @@ Route::get('/information', [AdminController::class, 'createInformation'])->name(
 Route::post('/information', [AdminController::class, 'storeInformation'])->name('information.store');
 Route::get('/information/edit/{id}', [AdminController::class, 'edit'])->name('information.edit');
 Route::put('/information/update/{id}', [AdminController::class, 'updateInformation'])->name('information.update');
+Route::delete('/information/{id}', [AdminController::class, 'deleteInformation'])->name('information.delete');
 
 
 Route::post('/filieres', [AdminController::class, 'storeFiliere'])->name('filieres.store');

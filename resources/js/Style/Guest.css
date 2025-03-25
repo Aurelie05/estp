@@ -12,12 +12,16 @@
     display: none;
 }
 .no-underline2 {
+    width: 100%;
     color: #000000;
+    /* border-bottom: none; */
     text-decoration: none; /* Enlève le trait en bas des liens */
 }
 .no-underline2:hover {
-    /* color: #000000; */
-    border-bottom: #206903;   
+    /* border: 2px solid white; */
+    /* color: #ffffff; */
+    /* background-color: #206903; */
+    /* border-bottom: #206903;    */
 }
 
 
@@ -99,6 +103,13 @@
     /* font-weight: bold; */
     /* width: 20%; */
     color: #000000;
+}
+.menus{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid #206903;
+    border-radius: 5px;
 }
 
 .dropdown-content {
