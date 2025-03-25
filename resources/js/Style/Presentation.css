@@ -356,6 +356,26 @@ p {
     width: 100%;
     /* border: 4px solid; */
   }
+  .modal-content{
+    height: auto;
+    position: absolute;
+    top: 100px;
+    width: 90%;
+    margin: 0 auto;
+    /* color: #ffffff; */
+    z-index: 2000;
+    /* background-color: #000; */
+  }
+  .close-button{
+    text-align: center;
+    width: 70px;
+    height: 30px;
+  }
+  .director-texto{
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+  }
   .blurred-image-container{
     width: 100%;
     height: 300px;
@@ -378,11 +398,11 @@ p {
     font-size: 15px;
   }
   .section1{
-    top: 600px;
+    top: 800px;
   }
 
 .points-forts-section{
-  top: 1150px;
+  top: 1250px;
 }
 
 
@@ -399,6 +419,26 @@ p {
     width: 100%;
     height:500px;
     /* border: 5px solid red; */
+  }
+  .modal-content{
+    height: auto;
+    position: absolute;
+    top: 100px;
+    width: 90%;
+    margin: 0 auto;
+    /* color: #ffffff; */
+    z-index: 2000;
+    /* background-color: #000; */
+  }
+  .close-button{
+    text-align: center;
+    width: 70px;
+    height: 30px;
+  }
+  .director-texto{
+    font-size: 17px;
+    width: 100%;
+    height: 100%;
   }
   .presentation-section{
     width: 80%;
@@ -435,6 +475,26 @@ p {
     width: 100%;
     height:500px;
     /* border: 5px solid red; */
+  }
+  .modal-content{
+    height: auto;
+    position: absolute;
+    top: 100px;
+    width: 90%;
+    margin: 0 auto;
+    /* color: #ffffff; */
+    z-index: 2000;
+    /* background-color: #000; */
+  }
+  .close-button{
+    text-align: center;
+    width: 70px;
+    height: 30px;
+  }
+  .director-texto{
+    font-size: 17px;
+    width: 100%;
+    height: 100%;
   }
   .presentation-section{
     width: 80%;
@@ -478,6 +538,26 @@ p {
     /* top: 10px; */
     /* position: absolute; */
   }
+  .modal-content{
+    height: auto;
+    /* position: absolute; */
+    /* top: 100px; */
+    width: 70%;
+    margin: 0 auto;
+    /* color: #ffffff; */
+    z-index: 2000;
+    /* background-color: #000; */
+  }
+  .close-button{
+    text-align: center;
+    width: 70px;
+    height: 30px;
+  }
+  .director-texto{
+    font-size: 17px;
+    width: 100%;
+    height: 100%;
+  }
   .director-image{
     width: 30%;
   }
@@ -505,6 +585,26 @@ p {
     .section1{
       width: 70%;
       /* border: 1px solid; */
+    }
+    .modal-content{
+      height: auto;
+      position: absolute;
+      top: 400px;
+      width: 60%;
+      margin: 0 auto;
+      /* color: #ffffff; */
+      z-index: 2000;
+      /* background-color: #000; */
+    }
+    .close-button{
+      text-align: center;
+      width: 70px;
+      height: 30px;
+    }
+    .director-texto{
+      font-size: 18px;
+      width: 100%;
+      height: 100%;
     }
   
 }
