@@ -36,13 +36,28 @@
     font-weight: 500;
     font-style: normal;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+    background-color: #f1f1f1;
     /* border: 1px solid; */
     /* border: 1px solid red; */
 }
 .navbardeux{
     display: none;
 }
+.open-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .open-button:hover {
+    background-color: #218838;
+  }
 /* Navbar fixe */
 .navbar {
     position: fixed;
@@ -102,6 +117,7 @@
     font-size: 20px;
     /* font-weight: bold; */
     /* width: 20%; */
+    transition: background-color 0.3s ease-in-out;
     color: #000000;
 }
 .menus{
@@ -164,7 +180,7 @@
 }
 .menu:hover{
     /* color: rgb(0, 0, 0); */
-    border-bottom: 2px solid #206903;
+    border-bottom: 2px solid #28a745;
 }
 
 
@@ -250,20 +266,21 @@
         /* gap: 45px; */
         /* border: 2px solid; */
         margin: 10px;
+        cursor: pointer;
         display: flex;justify-content: center;
         height: 30px;
         /* border-bottom: 2px solid rgb(128, 7, 128); */
     }
     .menu3 li:hover{
-        color: rgb(126, 7, 224);
-        border-bottom: 2px solid rgb(126, 7, 224);
+        color: #28a745;
+        border-bottom: 2px solid #28a745;
     }
     .navbar{
         display: none;
         width: 100% !important;
         /* position: fixed; */
         /* border: 2px solid red; */
-        background-color: blue !important;
+        /* background-color: blue !important; */
         height: 80px;
         overflow: hidden;
         max-width: 100%;

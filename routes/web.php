@@ -95,7 +95,7 @@ Route::get('/', [AdminController::class, 'welcome'])->name('welcome');
 
 Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashevent');
 Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashinfo');
-
+Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashfiliere');
 
 Route::get('/presentation', [AdminController::class, 'presentation'])->name('presentation');
 
@@ -112,6 +112,10 @@ Route::post('/filieres', [AdminController::class, 'storeFiliere'])->name('filier
 
 Route::get('/filieres', [AdminController::class, 'createFiliere'])->name('filiere.create');
 Route::get('/filieres', [AdminController::class, 'index'])->name('filiere.create');
+Route::put('/filieres/{id}/debouche', [AdminController::class, 'updateDebouche'])->name('filieres.updateDebouche');
+Route::get('/filieres/{id}/edit-debouche', [AdminController::class, 'editDebouche'])->name('filieres.editDebouche');
+
+
 Route::get('/', [AdminController::class, 'index2'])->name('filiere.create');
 
 Route::get('/',[AdminController::class, 'welcome'])->name('welcome');

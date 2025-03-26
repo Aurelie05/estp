@@ -66,8 +66,8 @@ export default function Guest({ children }: PropsWithChildren) {
                     <div className='menu ' onClick={ () => window.open('/ecole','_self')}>Filieres</div>
                     <div className='menu  ' onClick={ () => window.open('/partenaire','_self')}>Partenaires</div>
                     <div className='menu ' onClick={ () => window.open('/actualites/page','_self')}>Actualités</div>
-                    <div className='menus ' ><a className="no-underline2" href="https://www.careercenter.inphb.app/" target="_blank" rel="noopener noreferrer">Offres de stage</a> </div>
-                    
+                    <div className='open-button ' ><a className="no-underline2" href="https://www.careercenter.inphb.app/" target="_blank" rel="noopener noreferrer">Offres de stage</a> </div>
+                    {/* <button className='btn btn-outline-success'>Offre de stage</button> */}
 
                 </div>
                 <div className='menu2 ' onClick={toggleMenu}>

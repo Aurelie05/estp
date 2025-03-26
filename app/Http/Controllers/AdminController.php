@@ -132,16 +132,18 @@ class AdminController extends Controller
     $informations = Information::select('id', 'titre', 'image', 'nom_image', 'description')
                                 ->get(); // Récupérer les informations
 
+    $filieres = Filiere::select('id', 'cycle', 'nom_filiere', 'debouchés')->get(); // Récupérer les filières
+
     if (Auth::check()) {                        
         $userName = Auth::user()->name; 
     } else {
-        $userName = 'Invité';
         return redirect()->route('login');
     }
 
     return Inertia::render('Dashboard', [
         'evenements' => $evenements,
         'informations' => $informations, // Ajout des informations
+        'filieres' => $filieres, // Ajout des filières
         'userName' => $userName
     ]);
 }
@@ -388,6 +390,30 @@ public function storeFiliere(Request $request)
 
         return redirect()->route('ecoles')->with('success', 'Filière ajoutée avec succès');
     }
+}
+public function editDebouche($id)
+{
+    $filiere = Filiere::findOrFail($id);
+    return Inertia::render('DeboucheEdit', ['filiere' => $filiere]);
+}
+
+public function updateDebouche(Request $request, $id)
+{
+    $filiere = Filiere::find($id);
+
+    if (!$filiere) {
+        return response()->json(['error' => 'Filière introuvable'], 404);
+    }
+
+    $request->validate([
+        'debouchés' => 'required|string|max:255',
+    ]);
+
+    $filiere->update([
+        'debouchés' => $request->debouchés
+    ]);
+
+    return redirect()->route('dashboard')->with('success', 'Débouché mis à jour avec succès');
 }
 
     
