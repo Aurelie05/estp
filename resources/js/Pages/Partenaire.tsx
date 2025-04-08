@@ -21,7 +21,7 @@ import logo5 from '@/Assets/pfo.png'
 import logo6 from '@/Assets/btp.png'
 import logo7 from '@/Assets/images.jpg'
 import logo8 from '@/Assets/1631302844732.jpg'
-import logo9 from '@/Assets/20130703224050!Logo_Ageroute_CI.png'
+import logo9 from '@/Assets/AGEROUTE.jpg'
 
 
 
