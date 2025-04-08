@@ -16,6 +16,14 @@ import slide5 from "@/Assets/INP-HB_files/PE (8).cc92af4dbb97457ae5ce.png"
 import logo1 from '@/Assets/25.jpg'
 import logo2 from '@/Assets/logo-enpc-ip-cmjn_vertical.jpg'
 import logo3 from '@/Assets/深圳职业技术大学logo.jpg'
+import logo4 from '@/Assets/Razel-Bec_Logo.png'
+import logo5 from '@/Assets/pfo.png'
+import logo6 from '@/Assets/btp.png'
+import logo7 from '@/Assets/images.jpg'
+import logo8 from '@/Assets/1631302844732.jpg'
+import logo9 from '@/Assets/20130703224050!Logo_Ageroute_CI.png'
+
+
 
 
 // Exemple de données pour les partenaires (vous pouvez remplacer avec des données dynamiques)
@@ -33,6 +41,12 @@ const partenairesEntreprises = [
   { id: 1,  logo:  slide3},
   { id: 1,  logo:  slide4},
   { id: 1,  logo:  slide5},
+  { id: 1,  logo:  logo4},
+  { id: 1,  logo:  logo5},
+  { id: 1,  logo:  logo6},
+  { id: 1,  logo:  logo7},
+  { id: 1,  logo:  logo8},
+  { id: 1,  logo:  logo9},
 
 ];
 
