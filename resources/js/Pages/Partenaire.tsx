@@ -13,14 +13,19 @@ import slide2 from "@/Assets/INP-HB_files/PE (2).0bbba88c4d6cae1d2614.png"
 import slide3 from "@/Assets/INP-HB_files/PE (3).6c49da634e18ba182378.png"
 import slide4 from "@/Assets/INP-HB_files/PE (6).4a4a7e32114788396eba.png"
 import slide5 from "@/Assets/INP-HB_files/PE (8).cc92af4dbb97457ae5ce.png"
-
+import logo1 from '@/Assets/25.jpg'
+import logo2 from '@/Assets/logo-enpc-ip-cmjn_vertical.jpg'
+import logo3 from '@/Assets/深圳职业技术大学logo.jpg'
 
 
 // Exemple de données pour les partenaires (vous pouvez remplacer avec des données dynamiques)
 const partenairesAcademiques = [
   { id: 1,  logo: Pa },
-  { id: 2,  logo: Pa },
+  { id: 2,  logo: logo3 },
   { id: 3,  logo: college },
+  { id: 4,  logo: logo1 },
+  { id: 5,  logo: logo2 },
+  
 ];
 
 const partenairesEntreprises = [

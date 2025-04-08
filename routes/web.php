@@ -109,7 +109,6 @@ Route::delete('/information/{id}', [AdminController::class, 'deleteInformation']
 
 Route::post('/filieres', [AdminController::class, 'storeFiliere'])->name('filieres.store');
 
-
 Route::get('/filieres', [AdminController::class, 'createFiliere'])->name('filiere.create');
 Route::get('/filieres', [AdminController::class, 'index'])->name('filiere.create');
 Route::put('/filieres/{id}/debouche', [AdminController::class, 'updateDebouche'])->name('filieres.updateDebouche');
