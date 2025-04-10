@@ -94,7 +94,7 @@ const Partenaire = () => {
 
       {/* Section Partenaires Académiques */}
       <section className="partenaire-section">
-        <h2 className="section-title">Partenaires Académiques</h2>
+        <h2 className="section-title">Quelques Partenaires Académiques</h2>
         <Slider {...sliderSettings}>
           {partenairesAcademiques.map((partenaire) => (
             <div key={partenaire.id} className="slider-item grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
@@ -113,7 +113,7 @@ const Partenaire = () => {
 
       {/* Section Partenaires Entreprises */}
       <section className="partenaire-section">
-        <h2 className="section-title">Partenaires Entreprises</h2>
+        <h2 className="section-title">Quelques Partenaires Entreprises</h2>
         <Slider {...sliderSettings}>
           {partenairesEntreprises.map((partenaire) => (
             <div key={partenaire.id} className="slider-item">

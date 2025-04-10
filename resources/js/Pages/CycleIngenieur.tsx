@@ -33,14 +33,14 @@ const CycleIngenieur = () => {
 
 {/* Technicien Supérieur spécialité Bâtiment et Urbanisme */}
     <div className="filiere-card">
-      <h3>Génie Civil option Bâtiment et Urbanisme</h3>
+      <h3>Travaux Publics option Bâtiment et Urbanisme</h3>
       <p>
         L'urbanisme est un domaine qui étudie et planifie l'organisation des villes, englobant 
         l’aménagement du territoire, le développement urbain et la gestion des espaces urbains 
         pour assurer un cadre de vie fonctionnel et harmonieux.
       </p>
       <ul>
-        <strong>Débouchés professionnels :</strong>
+        <strong>Quelques Débouchés professionnels :</strong>
         <li>Collectivités locales</li>
         <li>Administration pour la planification et la gestion de l’urbanisation des villes</li>
         <li>Cabinets d’architectes ou d’urbanistes</li>
@@ -53,13 +53,13 @@ const CycleIngenieur = () => {
 
 {/* Technicien Supérieur spécialité Hydraulique et Environnement */}
     <div className="filiere-card">
-      <h3>Génie Civil option Hydraulique et Environnement</h3>
+      <h3>Travaux Publics option Hydraulique et Environnement</h3>
       <p>
         L'hydraulique est la discipline qui étudie le comportement et le mouvement des liquides, 
         en particulier de l'eau, ainsi que leur utilisation dans divers systèmes et applications.
       </p>
       <ul>
-        <strong>Débouchés professionnels :</strong>
+        <strong>Quelques Débouchés professionnels :</strong>
         <li>Collectivités locales</li>
         <li>Administration</li>
         <li>Bureaux d’études spécialisés</li>
@@ -70,13 +70,13 @@ const CycleIngenieur = () => {
 
 {/* Technicien Supérieur spécialité Routes et Transports */}
     <div className="filiere-card">
-      <h3>Génie Civil option Infrastructures et Transports</h3>
+      <h3>Travaux Publics option Infrastructures et Transports</h3>
       <p>
         Cette spécialité concerne la conception, la construction et la maintenance des infrastructures routières et 
         des systèmes de transport pour assurer des déplacements sûrs et efficaces.
       </p>
       <ul>
-        <strong>Débouchés professionnels :</strong>
+        <strong>Quelques Débouchés professionnels :</strong>
         <li>Collectivités locales</li>
         <li>Administration</li>
         <li>Bureaux d’études et de contrôle</li>
@@ -92,7 +92,7 @@ const CycleIngenieur = () => {
         gestion foncière, la cartographie et les projets de construction.
       </p>
       <ul>
-        <strong>Débouchés professionnels :</strong>
+        <strong>Quelques Débouchés professionnels :</strong>
         <li>Bureaux de géomètres-experts</li>
         <li>Cabinets de topographie</li>
         <li>Collectivités locales</li>

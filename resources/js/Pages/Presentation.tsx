@@ -67,11 +67,12 @@ const pointsForts = [
     icon: "👨‍🏫",
   },
   {
-    title: "Infrastructures modernes",
+    title: "Accréditation CTI",
     description:
-      "Un campus équipé des dernières technologies et des espaces de travail adaptés aux besoins des étudiants.",
-    icon: "🏢",
-  },
+      "L'école bénéficie de l'accréditation de la Commission des Titres d'Ingénieur (CTI), une reconnaissance officielle garantissant la qualité de la formation d'ingénieur. Cette accréditation est valable de juin 2022 à juin 2025.",
+    icon: "📜",
+  }
+  
 ];
 
 useEffect(() => {

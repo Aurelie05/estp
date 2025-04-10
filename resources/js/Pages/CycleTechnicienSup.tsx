@@ -44,7 +44,7 @@ const CycleTechnicienSup = () => {
               pour assurer un cadre de vie fonctionnel et harmonieux.
             </p>
             <ul>
-              <strong>Débouchés professionnels :</strong>
+              <strong>Quelques Débouchés professionnels :</strong>
               <li>Collectivités locales</li>
               <li>Administration pour la planification et la gestion de l’urbanisation des villes</li>
               <li>Cabinets d’architectes ou d’urbanistes</li>
@@ -63,7 +63,7 @@ const CycleTechnicienSup = () => {
               en particulier de l'eau, ainsi que leur utilisation dans divers systèmes et applications.
             </p>
             <ul>
-              <strong>Débouchés professionnels :</strong>
+              <strong>Quelques Débouchés professionnels :</strong>
               <li>Collectivités locales</li>
               <li>Administration</li>
               <li>Bureaux d’études spécialisés</li>
@@ -80,7 +80,7 @@ const CycleTechnicienSup = () => {
               des systèmes de transport pour assurer des déplacements sûrs et efficaces.
             </p>
             <ul>
-              <strong>Débouchés professionnels :</strong>
+              <strong>Quelques Débouchés professionnels :</strong>
               <li>Collectivités locales</li>
               <li>Administration</li>
               <li>Bureaux d’études et de contrôle</li>
@@ -102,7 +102,7 @@ const CycleTechnicienSup = () => {
               gestion foncière, la cartographie et les projets de construction.
             </p>
             <ul>
-              <strong>Débouchés professionnels :</strong>
+              <strong>Quelques Débouchés professionnels :</strong>
               <li>Cabinet de géomètre-expert</li>
               <li>Cadastre</li>
               <li>Domaine de la conservation foncière</li>
